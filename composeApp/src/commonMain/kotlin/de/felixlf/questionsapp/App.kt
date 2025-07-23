@@ -37,10 +37,13 @@ fun App() {
             Modifier.fillMaxWidth().padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            Text(text = "Questions shown: ${state.shownQuestions} / ${state.totalQuestions}")
+            Text(text = "Remaining questions: ${state.remainingQuestions}")
             Text(text = "Questions answered: ${state.answeredQuestions}")
-            Text(
-                text = "Correct answers: ${state.correctAnswers} Percentage: ${state.correctAnswers.toFloat() / state.answeredQuestions * 100}%"
-            )
+            val percentage = if (state.answeredQuestions > 0) {
+                (state.correctAnswers.toFloat() / state.answeredQuestions * 100).toInt()
+            } else 0
+            Text(text = "Session correct answers: ${state.correctAnswers} (${percentage}%)")
             Spacer(modifier = Modifier.padding(16.dp))
             state.currentQuestion?.let { question ->
                 Text(text = question.question, style = MaterialTheme.typography.h6)

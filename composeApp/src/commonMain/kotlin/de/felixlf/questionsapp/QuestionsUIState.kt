@@ -1,6 +1,7 @@
 package de.felixlf.questionsapp
 
 import de.felixlf.questionsapp.domain.Question
+import de.felixlf.questionsapp.shared.persistence.models.UserProgress
 
 data class QuestionsUIState(
     val allQuestions: Map<Int, Question>,
@@ -8,9 +9,14 @@ data class QuestionsUIState(
     val currentAnswers: List<Question.Answer>,
     val showSolution: Boolean,
     val loading: Boolean,
-    val answeredQuestions: Int,
-    val correctAnswers: Int
+    val userProgress: UserProgress
 ) {
+    val answeredQuestions: Int get() = userProgress.answeredQuestions
+    val correctAnswers: Int get() = userProgress.correctAnswers
+    val shownQuestions: Int get() = userProgress.shownQuestions
+    val totalQuestions: Int get() = userProgress.totalQuestions
+    val remainingQuestions: Int get() = userProgress.remainingQuestions
+    
     companion object {
         val initial = QuestionsUIState(
             allQuestions = emptyMap(),
@@ -18,8 +24,7 @@ data class QuestionsUIState(
             currentAnswers = emptyList(),
             showSolution = false,
             loading = true,
-            answeredQuestions = 0,
-            correctAnswers = 0
+            userProgress = UserProgress()
         )
     }
 }

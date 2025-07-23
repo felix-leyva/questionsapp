@@ -2,6 +2,7 @@
 # Project specific
 firebaseBom = "33.2.0"
 multiplatformSettings = "1.2.0"
+kstore = "0.9.1"
 packagename = "de.felixlf.questionsapp"
 applicationId = "de.felixlf.questionsapp"
 turbine = "1.1.0"
@@ -28,6 +29,7 @@ kotlin = "2.0.20"
 java = "11"
 kotlinx-coroutines = "1.8.1"
 kotlinx-dateTime = "0.6.0"
+kotlinx-io = "0.5.1"
 koin = "4.0.0-RC2"
 ktor = "2.3.12"
 ktlintGradle = "12.1.1" # https://github.com/JLLeitschuh/ktlint-gradle/releases
@@ -75,6 +77,13 @@ compose-preview-tooling = { group = "org.jetbrains.compose.ui", name= "ui-toolin
 # ViewModel & Coroutines
 androidx-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
 kotlinx-coroutines-swing = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
+kotlinx-io = { group = "org.jetbrains.kotlinx", name = "kotlinx-io-core", version.ref = "kotlinx-io" }
+kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "kotlinx-dateTime" }
+
+# KStore
+kstore = { module = "io.github.xxfast:kstore", version.ref = "kstore" }
+kstore-file = { module = "io.github.xxfast:kstore-file", version.ref = "kstore" }
+kstore-storage = { module = "io.github.xxfast:kstore-storage", version.ref = "kstore" }
 
 # Room & SQLite
 multiplatform-settings = { module = "com.russhwolf:multiplatform-settings", version.ref = "multiplatformSettings" }

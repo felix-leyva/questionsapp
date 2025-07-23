@@ -3,84 +3,135 @@ package de.felixlf.questionsapp
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import de.felixlf.questionsapp.domain.Question
+import de.felixlf.questionsapp.shared.persistence.QuestionsPersistenceRepository
+import de.felixlf.questionsapp.shared.persistence.usecases.GenerateUserProgress
+import de.felixlf.questionsapp.shared.persistence.usecases.QuestionSelectionStrategy
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
-import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
 class QuestionsViewModel(
     questionsProvider: QuestionsProvider,
-    private val trackedQuestionsService: TrackedQuetionsService
+    private val persistenceRepository: QuestionsPersistenceRepository,
+    private val generateUserProgress: GenerateUserProgress,
+    private val questionSelectionStrategy: QuestionSelectionStrategy
 ) : ViewModel() {
+    
     private val allQuestions = questionsProvider.getQuestions()
         .map { questions -> questions.associateBy { it.hashCode() } }
 
     private val currentQuestion = MutableStateFlow<Question?>(null)
     private val currentAnswers = MutableStateFlow<List<Question.Answer>>(emptyList())
     private val showSolution = MutableStateFlow(false)
-    private val answeredQuestions = MutableStateFlow(0)
-    private val correctAnswers = MutableStateFlow(0)
-    private val loading = MutableStateFlow(false)
+    private val loading = MutableStateFlow(true)
+    
+    // Track session-specific correct answers (resets on app start)
+    private val sessionCorrectAnswers = MutableStateFlow(0)
 
-    val state = combine(
+    private val userProgress = combine(
+        persistenceRepository.questionsData,
+        allQuestions,
+        sessionCorrectAnswers
+    ) { questionsData, allQs, sessionCorrect ->
+        generateUserProgress(questionsData, allQs.size, sessionCorrect)
+    }
+
+    val state: StateFlow<QuestionsUIState> = combine(
         allQuestions,
         currentQuestion,
         currentAnswers,
         showSolution,
         loading,
-        answeredQuestions,
-        correctAnswers,
-        ::QuestionsUIState
-    ).stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), QuestionsUIState.initial)
+        userProgress
+    ) { allQs, currentQ, currentAs, showSol, isLoading, progress ->
+        QuestionsUIState(
+            allQuestions = allQs,
+            currentQuestion = currentQ,
+            currentAnswers = currentAs,
+            showSolution = showSol,
+            loading = isLoading,
+            userProgress = progress
+        )
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), QuestionsUIState.initial)
 
     init {
         viewModelScope.launch {
-            state.first { !it.loading }
+            // Wait for questions to load
+            allQuestions.first { it.isNotEmpty() }
             setNewQuestion()
         }
     }
 
     fun setNewQuestion() = viewModelScope.launch {
-        loading.emit(true)
+        loading.value = true
         delay(500)
         showSolution.value = false
 
-        val availableQuestions =
-            state.value.allQuestions.keys.filter { (trackedQuestionsService.getTrackedQuestions(it) ?: 0) < 2 }
+        val allQuestionHashes = state.value.allQuestions.keys
+        val questionsData = persistenceRepository.questionsData.first()
+        
+        val availableQuestions = questionSelectionStrategy.getAvailableQuestions(
+            allQuestionHashes, 
+            questionsData
+        )
 
-        val currentQuestion = if (availableQuestions.isNotEmpty()) {
-            val randomKey = availableQuestions.random()
-            state.value.allQuestions[randomKey] ?: return@launch
-        } else return@launch
+        val selectedQuestionHash = questionSelectionStrategy.selectNextQuestion(
+            availableQuestions, 
+            questionsData
+        )
 
-        this@QuestionsViewModel.currentQuestion.value = currentQuestion
+        val selectedQuestion = selectedQuestionHash?.let { hash ->
+            state.value.allQuestions[hash]
+        }
 
-        val currentAnswers = currentQuestion.answers.shuffled().map { it.copy(correct = false) }
-        this@QuestionsViewModel.currentAnswers.value = currentAnswers
+        if (selectedQuestion != null) {
+            // Mark question as shown in persistence
+            persistenceRepository.markQuestionShown(selectedQuestion.hashCode())
+            
+            currentQuestion.value = selectedQuestion
+            val shuffledAnswers = selectedQuestion.answers.shuffled().map { it.copy(correct = false) }
+            currentAnswers.value = shuffledAnswers
+        } else {
+            // No more questions available
+            currentQuestion.value = null
+            currentAnswers.value = emptyList()
+        }
+        
         loading.value = false
     }
 
     fun setAnswer(answer: Question.Answer) {
-        currentAnswers.value = state.value.currentAnswers.map {
-            when (it.description) {
+        currentAnswers.value = state.value.currentAnswers.map { currentAnswer ->
+            when (currentAnswer.description) {
                 answer.description -> answer
-                else -> it
+                else -> currentAnswer
             }
         }
     }
 
-    fun submitAnswer(userAnswers: List<Question.Answer>) {
-        val currentQuestion = state.value.currentQuestion ?: return
-        answeredQuestions.update { it + 1 }
+    fun submitAnswer(userAnswers: List<Question.Answer>) = viewModelScope.launch {
+        val currentQuestion = state.value.currentQuestion ?: return@launch
+        
         showSolution.value = true
-        if (currentQuestion.checkIfSubmittedAnswersAreCorrect(userAnswers)) viewModelScope.launch {
-            correctAnswers.update { it + 1 }
-            trackedQuestionsService.upsertTrackedQuestion(currentQuestion.hashCode(), 1)
+        
+        val isCorrect = currentQuestion.checkIfSubmittedAnswersAreCorrect(userAnswers)
+        
+        // Update session correct answers if answer is correct
+        if (isCorrect) {
+            sessionCorrectAnswers.value = sessionCorrectAnswers.value + 1
         }
+        
+        // Persist the answer result
+        persistenceRepository.markQuestionAnswered(currentQuestion.hashCode(), isCorrect)
+    }
+    
+    fun clearAllProgress() = viewModelScope.launch {
+        persistenceRepository.clearAllData()
     }
 }

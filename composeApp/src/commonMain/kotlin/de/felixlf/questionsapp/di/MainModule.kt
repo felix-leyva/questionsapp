@@ -9,6 +9,8 @@ import de.felixlf.questionsapp.QuestionsProviderImpl
 import de.felixlf.questionsapp.QuestionsViewModel
 import de.felixlf.questionsapp.TrackedQuetionsService
 import de.felixlf.questionsapp.data.db.dbModule
+import de.felixlf.questionsapp.persistence.di.persistenceModule
+import de.felixlf.questionsapp.persistence.di.platformPersistenceModule
 import org.koin.core.module.dsl.factoryOf
 import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.binds
@@ -18,7 +20,9 @@ import org.koin.dsl.module
 val mainModule = module {
     includes(
         getPlatformModule(),
-        dbModule
+        dbModule,
+        persistenceModule,
+        platformPersistenceModule
     )
 
     single<SuspendSettings> { Settings().toSuspendSettings() }
@@ -26,5 +30,12 @@ val mainModule = module {
         QuestionsProvider::class,
         TrackedQuetionsService::class
     )
-    factoryOf(::QuestionsViewModel)
+    factory { 
+        QuestionsViewModel(
+            questionsProvider = get(),
+            persistenceRepository = get(),
+            generateUserProgress = get(),
+            questionSelectionStrategy = get()
+        )
+    }
 }

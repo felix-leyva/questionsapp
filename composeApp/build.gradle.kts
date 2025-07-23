@@ -79,6 +79,7 @@ kotlin {
             implementation(libs.multiplatform.settings)
             implementation(libs.multiplatform.settings.no.arg)
             implementation(libs.multiplatform.settings.coroutines)
+            implementation(project(":persistence"))
         }
 
         commonTest.dependencies {
