@@ -1,4 +1,6 @@
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 
@@ -9,11 +11,24 @@ plugins {
     id(libs.plugins.kotlinxSerialization.get().pluginId)
     id(libs.plugins.jetbrainsCompose.get().pluginId)
     id(libs.plugins.compose.compiler.get().pluginId)
+    id(libs.plugins.gmazzoBuildConfig.get().pluginId)
+}
+
+// Define here the file name to use for the questions - provisory solution before a selection logic
+//  and UI is built into the App
+buildConfig {
+    forClass("BuildQuestionsFiles") {
+        packageName("de.felixlf.questionsapp")
+        // add a md file here and define it: shared/src/commonMain/composeResources/files
+        val fileName = "isaqb_questions.md"
+        buildConfigField("String", "QUESTIONS_FILE_NAME", "\"$fileName\"")
+    }
 }
 
 kotlin {
 
-    js {
+    @OptIn(ExperimentalWasmDsl::class)
+    wasmJs {
         outputModuleName = "shared"
         browser {
             val projectDirPath = project.projectDir.path
@@ -46,17 +61,6 @@ kotlin {
     }
 
     jvm("desktop")
-
-//    listOf(
-//        iosX64(),
-//        iosArm64(),
-//        iosSimulatorArm64()
-//    ).forEach { iosTarget ->
-//        iosTarget.binaries.framework {
-//            baseName = "ComposeApp"
-//            isStatic = true
-//        }
-//    }
 
     sourceSets {
         val desktopMain by getting

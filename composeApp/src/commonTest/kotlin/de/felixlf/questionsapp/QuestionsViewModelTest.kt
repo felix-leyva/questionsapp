@@ -45,11 +45,11 @@ class QuestionsViewModelTest {
     fun testSelectRandomQuestion() = runTest(dispatcher) {
         // Given
         val questions = listOf(
-            Question("Question 1", listOf(Question.Answer("Answer 1", true))),
-            Question("Question 2", listOf(Question.Answer("Answer 2", false))),
-            Question("Question 3", listOf(Question.Answer("Answer 3", false))),
-            Question("Question 4", listOf(Question.Answer("Answer 4", true))),
-            Question("Question 5", listOf(Question.Answer("Answer 5", true))),
+            Question("Question 1", listOf(Question.Answer("Answer 1", true)), null),
+            Question("Question 2", listOf(Question.Answer("Answer 2", false)), null),
+            Question("Question 3", listOf(Question.Answer("Answer 3", false)), null),
+            Question("Question 4", listOf(Question.Answer("Answer 4", true)), null),
+            Question("Question 5", listOf(Question.Answer("Answer 5", true)), null),
         )
 
         // When
@@ -72,11 +72,11 @@ class QuestionsViewModelTest {
     fun testSelectNewRandomQuestion() = runTest(dispatcher) {
         // Given
         val questions = listOf(
-            Question("Question 1", listOf(Question.Answer("Answer 1", true))),
-            Question("Question 2", listOf(Question.Answer("Answer 2", false))),
-            Question("Question 3", listOf(Question.Answer("Answer 3", false))),
-            Question("Question 4", listOf(Question.Answer("Answer 4", true))),
-            Question("Question 5", listOf(Question.Answer("Answer 5", true))),
+            Question("Question 1", listOf(Question.Answer("Answer 1", true)), null),
+            Question("Question 2", listOf(Question.Answer("Answer 2", false)), null),
+            Question("Question 3", listOf(Question.Answer("Answer 3", false)), null),
+            Question("Question 4", listOf(Question.Answer("Answer 4", true)), null),
+            Question("Question 5", listOf(Question.Answer("Answer 5", true)), null),
         )
         val viewModel = QuestionsViewModel(
             questionsProvider(questions),
@@ -100,11 +100,11 @@ class QuestionsViewModelTest {
     fun testSubmitAnswer() = runTest(dispatcher) {
         // Given
         val questions = listOf(
-            Question("Question 1", listOf(Question.Answer("Answer 1", true))),
-            Question("Question 2", listOf(Question.Answer("Answer 2", false))),
-            Question("Question 3", listOf(Question.Answer("Answer 3", false))),
-            Question("Question 4", listOf(Question.Answer("Answer 4", true))),
-            Question("Question 5", listOf(Question.Answer("Answer 5", true))),
+            Question("Question 1", listOf(Question.Answer("Answer 1", true)), null),
+            Question("Question 2", listOf(Question.Answer("Answer 2", false)), null),
+            Question("Question 3", listOf(Question.Answer("Answer 3", false)), null),
+            Question("Question 4", listOf(Question.Answer("Answer 4", true)), null),
+            Question("Question 5", listOf(Question.Answer("Answer 5", true)), null),
         )
         val viewModel = QuestionsViewModel(
             questionsProvider(questions),
@@ -131,11 +131,11 @@ class QuestionsViewModelTest {
     fun testSubmitAnswerFalse() = runTest(dispatcher) {
         // Given
         val questions = listOf(
-            Question("Question 1", listOf(Question.Answer("Answer 1", true))),
-            Question("Question 2", listOf(Question.Answer("Answer 2", false))),
-            Question("Question 3", listOf(Question.Answer("Answer 3", false))),
-            Question("Question 4", listOf(Question.Answer("Answer 4", true))),
-            Question("Question 5", listOf(Question.Answer("Answer 5", true))),
+            Question("Question 1", listOf(Question.Answer("Answer 1", true)), null),
+            Question("Question 2", listOf(Question.Answer("Answer 2", false)), null),
+            Question("Question 3", listOf(Question.Answer("Answer 3", false)), null),
+            Question("Question 4", listOf(Question.Answer("Answer 4", true)), null),
+            Question("Question 5", listOf(Question.Answer("Answer 5", true)), null),
         )
         val viewModel = QuestionsViewModel(
             questionsProvider(questions),

@@ -2,7 +2,8 @@ package de.felixlf.questionsapp.domain
 
 data class Question(
     val question: String,
-    val answers: List<Answer>
+    val answers: List<Answer>,
+    val rationale: String?,
 ) {
 
     fun checkIfSubmittedAnswersAreCorrect(userAnswers: List<Answer>): Boolean {

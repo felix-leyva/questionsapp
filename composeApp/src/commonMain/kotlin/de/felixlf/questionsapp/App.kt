@@ -103,6 +103,30 @@ fun App() {
                             val text = if (state.showSolution) "Next Question" else "Submit Answer"
                             Text(text)
                         }
+
+                        // Show rationale when solution is displayed and rationale exists
+                        question.rationale?.let { rationale ->
+                            if (state.showSolution) {
+                                Spacer(modifier = Modifier.padding(8.dp))
+                                Card(
+                                    backgroundColor = MaterialTheme.colors.primary.copy(alpha = 0.1f),
+                                    modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp)
+                                ) {
+                                    Column(modifier = Modifier.padding(16.dp)) {
+                                        Text(
+                                            text = "Rationale:",
+                                            style = MaterialTheme.typography.subtitle1,
+                                            color = MaterialTheme.colors.primary
+                                        )
+                                        Spacer(modifier = Modifier.padding(4.dp))
+                                        Text(
+                                            text = rationale,
+                                            style = MaterialTheme.typography.body2
+                                        )
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }

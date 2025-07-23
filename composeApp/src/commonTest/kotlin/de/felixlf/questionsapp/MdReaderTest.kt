@@ -1,12 +1,39 @@
 import de.felixlf.questionsapp.data.MdReader
 import kotlin.test.Test
+import kotlin.test.assertEquals
+import kotlin.test.assertNotNull
+import kotlin.test.assertNull
 
 class MdReaderTest {
     @Test
     fun testReadMd() {
         val mdReader = MdReader()
         val questions = mdReader.readMd(md = example)
-//        println(questions)
+        // Basic test to ensure parsing still works
+        assertEquals(3, questions.size)
+    }
+
+    @Test
+    fun testReadMdWithRationale() {
+        val mdReader = MdReader()
+        val questions = mdReader.readMd(md = exampleWithRationale)
+        
+        assertEquals(1, questions.size)
+        val question = questions.first()
+        assertEquals("According to the introduction, which of the following topics will be covered in this chapter?", question.question)
+        assertEquals(6, question.answers.size)
+        assertNotNull(question.rationale)
+        assertEquals("The text explicitly states that the chapter will cover \"the basic terms and definitions of software architecture\", \"differentiate software architecture from enterprise architecture\", and \"what role a software architect plays in a project and what goals we pursue with software architecture.\"", question.rationale)
+    }
+
+    @Test
+    fun testReadMdWithoutRationale() {
+        val mdReader = MdReader()
+        val questions = mdReader.readMd(md = example)
+        
+        questions.forEach { question ->
+            assertNull(question.rationale)
+        }
     }
 }
 
@@ -39,3 +66,17 @@ val example =
             "- [x] Teach them that it is their responsibility to work with the other teams to create an integrated Increment.\n" +
             "- [ ] Visit the five teams each day to inspect that their Sprint Backlogs are aligned.\n" +
             "\n" + "**[⬆ Back to Top](#table-of-contents)**"
+
+val exampleWithRationale = 
+    "### According to the introduction, which of the following topics will be covered in this chapter?\n" +
+            "\n" +
+            "- [x] The basic terms and definitions of software architecture.\n" +
+            "- [ ] How to write code in a specific programming language.\n" +
+            "- [x] The difference between software architecture and enterprise architecture.\n" +
+            "- [ ] The history of software development methodologies.\n" +
+            "- [x] The role of a software architect and the goals of software architecture.\n" +
+            "- [ ] How to manage a software development team.\n" +
+            "\n" +
+            "**Rationale:** The text explicitly states that the chapter will cover \"the basic terms and definitions of software architecture\", \"differentiate software architecture from enterprise architecture\", and \"what role a software architect plays in a project and what goals we pursue with software architecture.\"\n" +
+            "\n" +
+            "---"

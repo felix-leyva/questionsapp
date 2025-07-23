@@ -1,4 +1,7 @@
+@file:OptIn(ExperimentalWasmDsl::class)
+
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -28,9 +31,12 @@ kotlin {
         }
     }
 
-    js {
-        browser()
-        binaries.executable()
+    wasmJs {
+        browser {
+            testTask {
+                enabled = false
+            }
+        }
     }
 
     sourceSets {
@@ -56,7 +62,7 @@ kotlin {
             implementation(libs.kstore.file)
         }
 
-        jsMain.dependencies {
+        wasmJsMain.dependencies {
             implementation(libs.kstore.storage)
         }
 
