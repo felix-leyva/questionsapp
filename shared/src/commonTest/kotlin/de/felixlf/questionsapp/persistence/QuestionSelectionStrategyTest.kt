@@ -1,12 +1,11 @@
-package de.felixlf.questionsapp.shared.persistence
+package de.felixlf.questionsapp.persistence
 
-import de.felixlf.questionsapp.shared.persistence.models.QuestionStats
-import de.felixlf.questionsapp.shared.persistence.models.QuestionsData
-import de.felixlf.questionsapp.shared.persistence.usecases.DefaultQuestionSelectionStrategy
-import de.felixlf.questionsapp.shared.persistence.usecases.QuestionSelectionConfig
+import de.felixlf.questionsapp.persistence.models.QuestionStats
+import de.felixlf.questionsapp.persistence.models.QuestionsData
+import de.felixlf.questionsapp.persistence.usecases.DefaultQuestionSelectionStrategy
+import de.felixlf.questionsapp.persistence.usecases.QuestionSelectionConfig
 import kotlin.test.Test
 import kotlin.test.assertEquals
-import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 class QuestionSelectionStrategyTest {

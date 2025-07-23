@@ -1,4 +1,4 @@
-package de.felixlf.questionsapp
+package de.felixlf.questionsapp.data
 
 import de.felixlf.questionsapp.domain.Question
 

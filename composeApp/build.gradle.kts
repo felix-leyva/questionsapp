@@ -14,7 +14,7 @@ plugins {
 
 kotlin {
     js {
-        moduleName = "composeApp"
+        outputModuleName = "composeApp"
         browser {
             val projectDirPath = project.projectDir.path
             commonWebpackConfig {
@@ -56,7 +56,6 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
-            implementation(libs.ktor.client.okhttp)
             implementation(libs.koin.android)
             implementation(project(":shared"))
         }
@@ -70,16 +69,11 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
-            implementation(libs.ktor.client.core)
-            implementation(libs.ktor.client.content.negotiation)
-            implementation(libs.ktor.serialization.kotlinx.json)
             implementation(libs.koin.core)
             implementation(libs.koin.compose)
             implementation(libs.koin.composeVM)
-            implementation(libs.multiplatform.settings)
-            implementation(libs.multiplatform.settings.no.arg)
-            implementation(libs.multiplatform.settings.coroutines)
             implementation(project(":persistence"))
+            implementation(project(":shared"))
         }
 
         commonTest.dependencies {
@@ -88,6 +82,8 @@ kotlin {
             implementation(libs.coroutines.test)
             implementation(libs.koin.test)
             implementation(libs.turbine)
+            implementation(project(":persistence"))
+            implementation(project(":shared"))
         }
 
         desktopMain.dependencies {
@@ -97,7 +93,6 @@ kotlin {
         }
 
         iosMain.dependencies {
-            implementation(libs.ktor.client.darwin)
             implementation(project(":shared"))
         }
     }
@@ -105,6 +100,7 @@ kotlin {
 android{
     namespace = "de.felixlf.questionsapp"
 }
+
 
 
 compose.desktop {

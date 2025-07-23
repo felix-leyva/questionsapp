@@ -1,4 +1,4 @@
-package de.felixlf.questionsapp.shared.persistence.models
+package de.felixlf.questionsapp.persistence.models
 
 import kotlinx.serialization.Serializable
 

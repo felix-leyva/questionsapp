@@ -1,8 +1,8 @@
-package de.felixlf.questionsapp.shared.persistence
+package de.felixlf.questionsapp.persistence
 
-import de.felixlf.questionsapp.shared.persistence.models.QuestionStats
-import de.felixlf.questionsapp.shared.persistence.models.QuestionsData
-import de.felixlf.questionsapp.shared.persistence.usecases.GenerateUserProgressImpl
+import de.felixlf.questionsapp.persistence.models.QuestionStats
+import de.felixlf.questionsapp.persistence.models.QuestionsData
+import de.felixlf.questionsapp.persistence.usecases.GenerateUserProgressImpl
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -14,7 +14,7 @@ class GenerateUserProgressTest {
     fun `generateUserProgress returns empty progress for empty data`() {
         val questionsData = QuestionsData()
         
-        val result = generateUserProgress(questionsData)
+        val result = generateUserProgress(questionsData, 0, 0)
         
         assertEquals(0, result.answeredQuestions)
         assertEquals(0, result.correctAnswers)
@@ -31,7 +31,7 @@ class GenerateUserProgressTest {
             )
         )
         
-        val result = generateUserProgress(questionsData)
+        val result = generateUserProgress(questionsData, 3, 4)
         
         assertEquals(6, result.answeredQuestions) // 3 + 2 + 1
         assertEquals(4, result.correctAnswers)   // 2 + 1 + 1
@@ -47,7 +47,7 @@ class GenerateUserProgressTest {
             )
         )
         
-        val result = generateUserProgress(questionsData)
+        val result = generateUserProgress(questionsData, 2, 0)
         
         assertEquals(5, result.answeredQuestions)
         assertEquals(0, result.correctAnswers)

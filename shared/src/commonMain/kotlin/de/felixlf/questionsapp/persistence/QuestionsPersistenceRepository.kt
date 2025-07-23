@@ -1,6 +1,6 @@
-package de.felixlf.questionsapp.shared.persistence
+package de.felixlf.questionsapp.persistence
 
-import de.felixlf.questionsapp.shared.persistence.models.QuestionsData
+import de.felixlf.questionsapp.persistence.models.QuestionsData
 import kotlinx.coroutines.flow.Flow
 
 interface QuestionsPersistenceRepository {

@@ -1,4 +1,4 @@
-import de.felixlf.questionsapp.MdReader
+import de.felixlf.questionsapp.data.MdReader
 import kotlin.test.Test
 
 class MdReaderTest {

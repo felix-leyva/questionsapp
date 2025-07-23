@@ -1,9 +1,10 @@
-package de.felixlf.questionsapp.shared.persistence.models
+package de.felixlf.questionsapp.persistence.models
 
 import kotlinx.serialization.Serializable
-import kotlinx.datetime.Clock
+import kotlin.time.ExperimentalTime
 
 @Serializable
+@OptIn(ExperimentalTime::class)
 data class QuestionsData(
     val questionStats: Map<Int, QuestionStats> = emptyMap()
 ) {
@@ -19,7 +20,7 @@ data class QuestionsData(
         val currentStats = questionStats[questionHash] ?: QuestionStats(questionHash)
         val updatedStats = currentStats.copy(
             timesShown = currentStats.timesShown + 1,
-            lastShownTimestamp = Clock.System.now().toEpochMilliseconds()
+            lastShownTimestamp = kotlin.time.Clock.System.now().toEpochMilliseconds()
         )
         return copy(questionStats = questionStats + (questionHash to updatedStats))
     }
@@ -28,7 +29,7 @@ data class QuestionsData(
         val currentStats = questionStats[questionHash] ?: QuestionStats(questionHash)
         val updatedStats = currentStats.copy(
             timesAnsweredCorrectly = if (isCorrect) currentStats.timesAnsweredCorrectly + 1 else currentStats.timesAnsweredCorrectly,
-            lastAnsweredTimestamp = Clock.System.now().toEpochMilliseconds()
+            lastAnsweredTimestamp = kotlin.time.Clock.System.now().toEpochMilliseconds()
         )
         return copy(questionStats = questionStats + (questionHash to updatedStats))
     }

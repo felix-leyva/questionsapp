@@ -2,10 +2,11 @@ package de.felixlf.questionsapp
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import de.felixlf.questionsapp.data.QuestionsProvider
 import de.felixlf.questionsapp.domain.Question
-import de.felixlf.questionsapp.shared.persistence.QuestionsPersistenceRepository
-import de.felixlf.questionsapp.shared.persistence.usecases.GenerateUserProgress
-import de.felixlf.questionsapp.shared.persistence.usecases.QuestionSelectionStrategy
+import de.felixlf.questionsapp.persistence.QuestionsPersistenceRepository
+import de.felixlf.questionsapp.persistence.usecases.GenerateUserProgress
+import de.felixlf.questionsapp.persistence.usecases.QuestionSelectionStrategy
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted

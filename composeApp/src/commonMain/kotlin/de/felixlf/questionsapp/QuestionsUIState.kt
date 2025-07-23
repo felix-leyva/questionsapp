@@ -1,7 +1,7 @@
 package de.felixlf.questionsapp
 
 import de.felixlf.questionsapp.domain.Question
-import de.felixlf.questionsapp.shared.persistence.models.UserProgress
+import de.felixlf.questionsapp.persistence.models.UserProgress
 
 data class QuestionsUIState(
     val allQuestions: Map<Int, Question>,

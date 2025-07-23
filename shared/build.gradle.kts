@@ -7,12 +7,14 @@ plugins {
     id("gs-android-library")
     id(libs.plugins.ksp.get().pluginId)
     id(libs.plugins.kotlinxSerialization.get().pluginId)
+    id(libs.plugins.jetbrainsCompose.get().pluginId)
+    id(libs.plugins.compose.compiler.get().pluginId)
 }
 
 kotlin {
 
     js {
-        moduleName = "composeApp"
+        outputModuleName = "shared"
         browser {
             val projectDirPath = project.projectDir.path
             commonWebpackConfig {
@@ -66,12 +68,16 @@ kotlin {
 
         commonMain.dependencies {
             implementation(libs.androidx.lifecycle.viewmodel)
-//            implementation(libs.firebase.auth)
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.kotlinx.json)
             implementation(libs.koin.core)
             implementation(libs.kotlinx.datetime)
+            implementation(libs.multiplatform.settings)
+            implementation(libs.multiplatform.settings.no.arg)
+            implementation(libs.multiplatform.settings.coroutines)
+            implementation(compose.runtime)
+            implementation(compose.components.resources)
         }
 
         commonTest.dependencies {

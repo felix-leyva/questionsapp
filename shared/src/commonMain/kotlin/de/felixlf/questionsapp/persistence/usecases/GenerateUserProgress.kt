@@ -1,13 +1,13 @@
-package de.felixlf.questionsapp.shared.persistence.usecases
+package de.felixlf.questionsapp.persistence.usecases
 
-import de.felixlf.questionsapp.shared.persistence.models.QuestionsData
-import de.felixlf.questionsapp.shared.persistence.models.UserProgress
-import kotlinx.datetime.Clock
+import de.felixlf.questionsapp.persistence.models.QuestionsData
+import de.felixlf.questionsapp.persistence.models.UserProgress
+import kotlin.time.ExperimentalTime
 
 fun interface GenerateUserProgress {
     operator fun invoke(questionsData: QuestionsData, totalQuestions: Int, sessionCorrectAnswers: Int): UserProgress
 }
-
+@OptIn(ExperimentalTime::class)
 class GenerateUserProgressImpl : GenerateUserProgress {
     override operator fun invoke(questionsData: QuestionsData, totalQuestions: Int, sessionCorrectAnswers: Int): UserProgress {
         val allStats = questionsData.questionStats.values
@@ -21,7 +21,7 @@ class GenerateUserProgressImpl : GenerateUserProgress {
             shownQuestions = totalShown,
             totalQuestions = totalQuestions,
             totalSessionTime = 0L, // Not tracking time for now
-            lastUpdated = Clock.System.now().toEpochMilliseconds()
+            lastUpdated = kotlin.time.Clock.System.now().toEpochMilliseconds()
         )
     }
 }

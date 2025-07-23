@@ -1,4 +1,4 @@
-package de.felixlf.questionsapp.shared.persistence.usecases
+package de.felixlf.questionsapp.persistence.usecases
 
 data class QuestionSelectionConfig(
     val maxCorrectAnswersBeforeHiding: Int = 3,

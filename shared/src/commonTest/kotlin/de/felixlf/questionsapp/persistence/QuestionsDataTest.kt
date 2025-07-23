@@ -1,7 +1,7 @@
-package de.felixlf.questionsapp.shared.persistence
+package de.felixlf.questionsapp.persistence
 
-import de.felixlf.questionsapp.shared.persistence.models.QuestionStats
-import de.felixlf.questionsapp.shared.persistence.models.QuestionsData
+import de.felixlf.questionsapp.persistence.models.QuestionStats
+import de.felixlf.questionsapp.persistence.models.QuestionsData
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNull

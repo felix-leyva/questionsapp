@@ -1,7 +1,7 @@
-package de.felixlf.questionsapp.shared.persistence.usecases
+package de.felixlf.questionsapp.persistence.usecases
 
-import de.felixlf.questionsapp.shared.persistence.models.QuestionStats
-import de.felixlf.questionsapp.shared.persistence.models.QuestionsData
+import de.felixlf.questionsapp.persistence.models.QuestionStats
+import de.felixlf.questionsapp.persistence.models.QuestionsData
 
 interface QuestionSelectionStrategy {
     fun getAvailableQuestions(
