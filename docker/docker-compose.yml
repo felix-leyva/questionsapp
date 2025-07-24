@@ -1,0 +1,22 @@
+services:
+  questions-app-wasm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    expose:
+      - "80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - proxy
+      - default
+
+networks:
+  proxy:
+    external: true
+    name: proxyman
+  default:
