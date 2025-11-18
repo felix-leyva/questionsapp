@@ -13,7 +13,7 @@ actual class KStoreProvider {
         val documentDirectory = NSSearchPathForDirectoriesInDomains(
             NSDocumentDirectory, NSUserDomainMask, true
         ).first() as String
-        
+
         return storeOf(
             file = Path("$documentDirectory/questions_data.json"),
             default = QuestionsData()

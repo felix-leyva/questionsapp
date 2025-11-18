@@ -13,15 +13,19 @@ fun Project.jacocoBaseConfig() {
     subprojects {
         apply(plugin = "org.gradle.jacoco")
         extensions.configure<JacocoPluginExtension>("jacoco") {
-            toolVersion = "0.8.8"
+            toolVersion = "0.8.12"
         }
     }
 }
 
 fun Project.configureJacocoAndSonarqube(buildVariant: Variant) {
     val name = buildVariant.name
-    val nameCapitalized = name.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
-    val sources = buildVariant.sources.kotlin?.all?.get()?.map { it.asFile }?.filter { it.exists() } ?: error("Missing kotlin sources")
+    val nameCapitalized =
+        name.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
+    val sources =
+        buildVariant.sources.kotlin?.all?.get()?.map { it.asFile }?.filter { it.exists() } ?: error(
+            "Missing kotlin sources"
+        )
     val testTaskName = "test${nameCapitalized}UnitTest"
     tasks.create<JacocoReport>(name = "jacocoReport") {
         dependsOn(testTaskName)

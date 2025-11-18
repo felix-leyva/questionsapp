@@ -48,14 +48,15 @@ abstract class CatalogAccessor : DefaultTask() {
 
     @TaskAction
     fun generate() {
-        val generatedCode = FileSpec.builder("", "AccessorExtension").addImport("org.gradle.kotlin.dsl", "the")
-            .addProperty(
-                PropertySpec.builder("libs", LibrariesForLibs::class).receiver(Project::class)
-                    .getter(
-                        FunSpec.getterBuilder().addStatement("return the<LibrariesForLibs>()")
-                            .build()
-                    ).build()
-            ).build()
+        val generatedCode =
+            FileSpec.builder("", "AccessorExtension").addImport("org.gradle.kotlin.dsl", "the")
+                .addProperty(
+                    PropertySpec.builder("libs", LibrariesForLibs::class).receiver(Project::class)
+                        .getter(
+                            FunSpec.getterBuilder().addStatement("return the<LibrariesForLibs>()")
+                                .build()
+                        ).build()
+                ).build()
         outputFile.asFile.get().writeText(generatedCode.toString())
     }
 }

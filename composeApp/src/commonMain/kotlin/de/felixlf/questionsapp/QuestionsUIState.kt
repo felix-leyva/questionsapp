@@ -16,7 +16,7 @@ data class QuestionsUIState(
     val shownQuestions: Int get() = userProgress.shownQuestions
     val totalQuestions: Int get() = userProgress.totalQuestions
     val remainingQuestions: Int get() = userProgress.remainingQuestions
-    
+
     companion object {
         val initial = QuestionsUIState(
             allQuestions = emptyMap(),

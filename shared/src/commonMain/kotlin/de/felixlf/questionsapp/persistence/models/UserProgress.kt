@@ -15,7 +15,7 @@ data class UserProgress(
 ) {
     val correctAnswerRate: Double
         get() = if (answeredQuestions > 0) correctAnswers.toDouble() / answeredQuestions else 0.0
-    
+
     val remainingQuestions: Int
         get() = maxOf(0, totalQuestions - shownQuestions)
 }

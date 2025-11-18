@@ -30,7 +30,9 @@ import org.koin.compose.viewmodel.koinViewModel
 @Composable
 @Preview
 fun App() {
-    MaterialTheme {
+    MaterialTheme(
+
+    ) {
         Scaffold {
             val viewModel = koinViewModel<QuestionsViewModel>()
             val state by viewModel.state.collectAsStateWithLifecycle()
@@ -46,6 +48,7 @@ fun App() {
                 Text(text = "Session correct answers: ${state.correctAnswers} (${percentage}%)")
                 Spacer(modifier = Modifier.padding(16.dp))
                 state.currentQuestion?.let { question ->
+                    Text(text = question.questionSetName, style = MaterialTheme.typography.body1)
                     Text(text = question.question, style = MaterialTheme.typography.h6)
                     Column(
                         modifier = Modifier.verticalScroll(rememberScrollState())

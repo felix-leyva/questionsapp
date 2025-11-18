@@ -23,7 +23,7 @@ class QuestionsViewModel(
     private val generateUserProgress: GenerateUserProgress,
     private val questionSelectionStrategy: QuestionSelectionStrategy
 ) : ViewModel() {
-    
+
     private val allQuestions = questionsProvider.getQuestions()
         .map { questions -> questions.associateBy { it.hashCode() } }
 
@@ -31,7 +31,7 @@ class QuestionsViewModel(
     private val currentAnswers = MutableStateFlow<List<Question.Answer>>(emptyList())
     private val showSolution = MutableStateFlow(false)
     private val loading = MutableStateFlow(true)
-    
+
     // Track session-specific correct answers (resets on app start)
     private val sessionCorrectAnswers = MutableStateFlow(0)
 
@@ -76,14 +76,14 @@ class QuestionsViewModel(
 
         val allQuestionHashes = state.value.allQuestions.keys
         val questionsData = persistenceRepository.questionsData.first()
-        
+
         val availableQuestions = questionSelectionStrategy.getAvailableQuestions(
-            allQuestionHashes, 
+            allQuestionHashes,
             questionsData
         )
 
         val selectedQuestionHash = questionSelectionStrategy.selectNextQuestion(
-            availableQuestions, 
+            availableQuestions,
             questionsData
         )
 
@@ -94,16 +94,17 @@ class QuestionsViewModel(
         if (selectedQuestion != null) {
             // Mark question as shown in persistence
             persistenceRepository.markQuestionShown(selectedQuestion.hashCode())
-            
+
             currentQuestion.value = selectedQuestion
-            val shuffledAnswers = selectedQuestion.answers.shuffled().map { it.copy(correct = false) }
+            val shuffledAnswers =
+                selectedQuestion.answers.shuffled().map { it.copy(correct = false) }
             currentAnswers.value = shuffledAnswers
         } else {
             // No more questions available
             currentQuestion.value = null
             currentAnswers.value = emptyList()
         }
-        
+
         loading.value = false
     }
 
@@ -118,20 +119,20 @@ class QuestionsViewModel(
 
     fun submitAnswer(userAnswers: List<Question.Answer>) = viewModelScope.launch {
         val currentQuestion = state.value.currentQuestion ?: return@launch
-        
+
         showSolution.value = true
-        
+
         val isCorrect = currentQuestion.checkIfSubmittedAnswersAreCorrect(userAnswers)
-        
+
         // Update session correct answers if answer is correct
         if (isCorrect) {
             sessionCorrectAnswers.value = sessionCorrectAnswers.value + 1
         }
-        
+
         // Persist the answer result
         persistenceRepository.markQuestionAnswered(currentQuestion.hashCode(), isCorrect)
     }
-    
+
     fun clearAllProgress() = viewModelScope.launch {
         persistenceRepository.clearAllData()
     }

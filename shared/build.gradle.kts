@@ -1,4 +1,3 @@
-import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
@@ -7,6 +6,7 @@ import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 plugins {
     id(libs.plugins.kotlinMultiplatform.get().pluginId)
     id("gs-android-library")
+    id("resources-index-generator")
     id(libs.plugins.ksp.get().pluginId)
     id(libs.plugins.kotlinxSerialization.get().pluginId)
     id(libs.plugins.jetbrainsCompose.get().pluginId)
@@ -19,14 +19,12 @@ plugins {
 buildConfig {
     forClass("BuildQuestionsFiles") {
         packageName("de.felixlf.questionsapp")
-        // add a md file here and define it: shared/src/commonMain/composeResources/files
-        val fileName = "isaqb_questions.md"
-        buildConfigField("String", "QUESTIONS_FILE_NAME", "\"$fileName\"")
+        // select the directory where the questions are located: shared/src/commonMain/composeResources/files
+        buildConfigField("String", "CATEGORY_NAME", "\"isaqb\"")
     }
 }
 
 kotlin {
-
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
         outputModuleName = "shared"
@@ -49,9 +47,7 @@ kotlin {
         iosX64(),
         iosArm64(),
         iosSimulatorArm64()
-    ).forEach {
-
-    }
+    )
 
     androidTarget {
         @OptIn(ExperimentalKotlinGradlePluginApi::class)
@@ -63,6 +59,9 @@ kotlin {
     jvm("desktop")
 
     sourceSets {
+        configureEach {
+            languageSettings.optIn("kotlin.mpp.ExperimentalMppApi")
+        }
         val desktopMain by getting
 
         androidMain.dependencies {
@@ -88,6 +87,8 @@ kotlin {
             implementation(libs.junit)
             implementation(libs.kotlin.test)
             implementation(libs.koin.test)
+            implementation(libs.coroutines.test)
+            implementation(libs.kotlinx.io)
         }
 
         desktopMain.dependencies {

@@ -40,6 +40,7 @@ fun main() {
         println("=== END ERROR ===")
     }
 }
+
 private fun koinSetup() = startKoin {
     modules(mainModule)
     printLogger()

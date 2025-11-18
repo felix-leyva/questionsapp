@@ -1,43 +1,78 @@
 import de.felixlf.questionsapp.data.MdReader
+import kotlin.test.BeforeTest
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
 import kotlin.test.assertNull
+import kotlin.test.assertTrue
 
 class MdReaderTest {
+    private lateinit var mdReader: MdReader
+
+    @BeforeTest
+    fun setup() {
+        mdReader = MdReader()
+    }
+
     @Test
     fun testReadMd() {
-        val mdReader = MdReader()
-        val questions = mdReader.readMd(md = example)
-        // Basic test to ensure parsing still works
+        val questions = mdReader.readMd(md = example, "example")
         assertEquals(3, questions.size)
     }
 
     @Test
     fun testReadMdWithRationale() {
-        val mdReader = MdReader()
-        val questions = mdReader.readMd(md = exampleWithRationale)
-        
+        val questions = mdReader.readMd(md = exampleWithRationale, "exampleWithRationale")
+
         assertEquals(1, questions.size)
         val question = questions.first()
-        assertEquals("According to the introduction, which of the following topics will be covered in this chapter?", question.question)
+        assertEquals(
+            "According to the introduction, which of the following topics will be covered in this chapter?",
+            question.question
+        )
         assertEquals(6, question.answers.size)
         assertNotNull(question.rationale)
-        assertEquals("The text explicitly states that the chapter will cover \"the basic terms and definitions of software architecture\", \"differentiate software architecture from enterprise architecture\", and \"what role a software architect plays in a project and what goals we pursue with software architecture.\"", question.rationale)
+        assertEquals(
+            "The text explicitly states that the chapter will cover \"the basic terms and definitions of software architecture\", \"differentiate software architecture from enterprise architecture\", and \"what role a software architect plays in a project and what goals we pursue with software architecture.\"",
+            question.rationale
+        )
     }
 
     @Test
     fun testReadMdWithoutRationale() {
-        val mdReader = MdReader()
-        val questions = mdReader.readMd(md = example)
-        
+        val questions = mdReader.readMd(md = example, "example")
+
         questions.forEach { question ->
             assertNull(question.rationale)
         }
     }
+
+    @Test
+    fun testWithRealData() {
+        val path = "files/isaqb/"
+        val fileName = "067_3.2.4.4_arch_doc_-_views_-_deployment_view-verified.md"
+        val resourcePath = path + fileName
+        val fileContent = readTestResource(resourcePath)
+
+        assertNotNull(fileContent, "Test resource should exist")
+
+        val questions =
+            mdReader.readMd(md = fileContent, questionSetName = fileName, questionStart = "##")
+
+        assertTrue(questions.isNotEmpty(), "Should parse questions from real file")
+        questions.forEach { question ->
+            assertNotNull(question.question, "Question text should not be null")
+            assertTrue(question.answers.isNotEmpty(), "Question should have answers")
+        }
+    }
+
+    private fun readTestResource(path: String): String? {
+        return this::class.java.classLoader?.getResourceAsStream(path)?.bufferedReader()
+            ?.use { it.readText() }
+    }
 }
 
-val example =
+const val example =
     "### The Product Owner is not collaborating with the Development Team during the Sprint. What are two valuable actions for a Scrum Master to take? (choose the best two answers)\n" +
             "\n" +
             "- [ ] Nominate a proxy Product Owner.\n" +
@@ -67,7 +102,7 @@ val example =
             "- [ ] Visit the five teams each day to inspect that their Sprint Backlogs are aligned.\n" +
             "\n" + "**[⬆ Back to Top](#table-of-contents)**"
 
-val exampleWithRationale = 
+const val exampleWithRationale =
     "### According to the introduction, which of the following topics will be covered in this chapter?\n" +
             "\n" +
             "- [x] The basic terms and definitions of software architecture.\n" +

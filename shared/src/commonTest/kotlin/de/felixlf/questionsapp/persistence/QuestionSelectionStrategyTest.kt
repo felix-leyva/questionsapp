@@ -16,7 +16,7 @@ class QuestionSelectionStrategyTest {
         mediumPriorityCorrectThreshold = 0.7,
         minimumAttemptsForPrioritization = 2
     )
-    
+
     private val strategy = DefaultQuestionSelectionStrategy(config)
 
     @Test
@@ -24,15 +24,27 @@ class QuestionSelectionStrategyTest {
         val allQuestions = setOf(1, 2, 3, 4)
         val questionsData = QuestionsData(
             questionStats = mapOf(
-                1 to QuestionStats(1, timesShown = 5, timesAnsweredCorrectly = 3), // Should be excluded
-                2 to QuestionStats(2, timesShown = 3, timesAnsweredCorrectly = 2), // Should be included
-                3 to QuestionStats(3, timesShown = 2, timesAnsweredCorrectly = 1), // Should be included
+                1 to QuestionStats(
+                    1,
+                    timesShown = 5,
+                    timesAnsweredCorrectly = 3
+                ), // Should be excluded
+                2 to QuestionStats(
+                    2,
+                    timesShown = 3,
+                    timesAnsweredCorrectly = 2
+                ), // Should be included
+                3 to QuestionStats(
+                    3,
+                    timesShown = 2,
+                    timesAnsweredCorrectly = 1
+                ), // Should be included
                 // Question 4 has no stats, should be included
             )
         )
-        
+
         val result = strategy.getAvailableQuestions(allQuestions, questionsData)
-        
+
         assertEquals(setOf(2, 3, 4), result.toSet())
     }
 
@@ -44,21 +56,24 @@ class QuestionSelectionStrategyTest {
 
     @Test
     fun `calculatePriority returns 90 for difficult questions`() {
-        val questionStats = QuestionStats(1, timesShown = 5, timesAnsweredCorrectly = 1) // 20% success rate
+        val questionStats =
+            QuestionStats(1, timesShown = 5, timesAnsweredCorrectly = 1) // 20% success rate
         val priority = strategy.calculatePriority(questionStats)
         assertEquals(90, priority)
     }
 
     @Test
     fun `calculatePriority returns 70 for medium difficulty questions`() {
-        val questionStats = QuestionStats(1, timesShown = 5, timesAnsweredCorrectly = 2) // 40% success rate
+        val questionStats =
+            QuestionStats(1, timesShown = 5, timesAnsweredCorrectly = 2) // 40% success rate
         val priority = strategy.calculatePriority(questionStats)
         assertEquals(70, priority)
     }
 
     @Test
     fun `calculatePriority returns 30 for easy questions`() {
-        val questionStats = QuestionStats(1, timesShown = 5, timesAnsweredCorrectly = 4) // 80% success rate
+        val questionStats =
+            QuestionStats(1, timesShown = 5, timesAnsweredCorrectly = 4) // 80% success rate
         val priority = strategy.calculatePriority(questionStats)
         assertEquals(30, priority)
     }
@@ -80,9 +95,9 @@ class QuestionSelectionStrategyTest {
     fun `selectNextQuestion returns a valid question from multiple options`() {
         val availableQuestions = listOf(1, 2, 3)
         val questionsData = QuestionsData()
-        
+
         val result = strategy.selectNextQuestion(availableQuestions, questionsData)
-        
+
         assertTrue(result in availableQuestions)
     }
 }

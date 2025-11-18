@@ -99,7 +99,7 @@ kotlin {
         }
     }
 }
-android{
+android {
     namespace = "de.felixlf.questionsapp"
 }
 

@@ -11,11 +11,11 @@ data class QuestionsData(
     fun getQuestionStats(questionHash: Int): QuestionStats? {
         return questionStats[questionHash]
     }
-    
+
     fun getTimesShown(questionHash: Int): Int {
         return questionStats[questionHash]?.timesShown ?: 0
     }
-    
+
     fun markQuestionShown(questionHash: Int): QuestionsData {
         val currentStats = questionStats[questionHash] ?: QuestionStats(questionHash)
         val updatedStats = currentStats.copy(
@@ -24,7 +24,7 @@ data class QuestionsData(
         )
         return copy(questionStats = questionStats + (questionHash to updatedStats))
     }
-    
+
     fun markQuestionAnswered(questionHash: Int, isCorrect: Boolean): QuestionsData {
         val currentStats = questionStats[questionHash] ?: QuestionStats(questionHash)
         val updatedStats = currentStats.copy(

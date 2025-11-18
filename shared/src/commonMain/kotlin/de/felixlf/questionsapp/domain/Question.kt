@@ -4,6 +4,7 @@ data class Question(
     val question: String,
     val answers: List<Answer>,
     val rationale: String?,
+    val questionSetName: String,
 ) {
 
     fun checkIfSubmittedAnswersAreCorrect(userAnswers: List<Answer>): Boolean {

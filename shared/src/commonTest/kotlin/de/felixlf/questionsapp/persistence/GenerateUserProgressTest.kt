@@ -13,9 +13,9 @@ class GenerateUserProgressTest {
     @Test
     fun `generateUserProgress returns empty progress for empty data`() {
         val questionsData = QuestionsData()
-        
+
         val result = generateUserProgress(questionsData, 0, 0)
-        
+
         assertEquals(0, result.answeredQuestions)
         assertEquals(0, result.correctAnswers)
         assertEquals(0.0, result.correctAnswerRate)
@@ -30,9 +30,9 @@ class GenerateUserProgressTest {
                 3 to QuestionStats(3, timesShown = 1, timesAnsweredCorrectly = 1)
             )
         )
-        
+
         val result = generateUserProgress(questionsData, 3, 4)
-        
+
         assertEquals(6, result.answeredQuestions) // 3 + 2 + 1
         assertEquals(4, result.correctAnswers)   // 2 + 1 + 1
         assertEquals(4.0 / 6.0, result.correctAnswerRate)
@@ -46,9 +46,9 @@ class GenerateUserProgressTest {
                 2 to QuestionStats(2, timesShown = 3, timesAnsweredCorrectly = 0)
             )
         )
-        
+
         val result = generateUserProgress(questionsData, 2, 0)
-        
+
         assertEquals(5, result.answeredQuestions)
         assertEquals(0, result.correctAnswers)
         assertEquals(0.0, result.correctAnswerRate)
