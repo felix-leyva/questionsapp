@@ -1,138 +1,79 @@
 package de.felixlf.questionsapp
 
 import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeContentPadding
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.Button
-import androidx.compose.material.Card
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.RadioButton
-import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.darkColorScheme
+import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import org.jetbrains.compose.ui.tooling.preview.Preview
+import de.felixlf.questionsapp.domain.Question
+import de.felixlf.questionsapp.ui.QuestionContent
+import de.felixlf.questionsapp.ui.StatsHeader
 import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
-@Preview
 fun App() {
+    val colorScheme = when {
+        isSystemInDarkTheme() -> darkColorScheme()
+        else -> lightColorScheme()
+    }
     MaterialTheme(
-
+        colorScheme = colorScheme
     ) {
         Scaffold {
             val viewModel = koinViewModel<QuestionsViewModel>()
             val state by viewModel.state.collectAsStateWithLifecycle()
-            val animatedAlpha by animateFloatAsState(targetValue = if (state.loading) 0.0f else 1f)
-            Column(
-                Modifier.fillMaxWidth().padding(it).safeContentPadding(),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                Text(text = "Questions shown: ${state.shownQuestions} / ${state.totalQuestions}")
-                val percentage = if (state.answeredQuestions > 0) {
-                    (state.correctAnswers.toFloat() / state.answeredQuestions * 100).toInt()
-                } else 0
-                Text(text = "Session correct answers: ${state.correctAnswers} (${percentage}%)")
-                Spacer(modifier = Modifier.padding(16.dp))
-                state.currentQuestion?.let { question ->
-                    Text(text = question.questionSetName, style = MaterialTheme.typography.body1)
-                    Text(text = question.question, style = MaterialTheme.typography.h6)
-                    Column(
-                        modifier = Modifier.verticalScroll(rememberScrollState())
-                            .alpha(animatedAlpha)
-                    ) {
-                        state.currentAnswers.forEach { answer ->
-                            val baseAnswer =
-                                question.answers.first { it.description == answer.description }
-                            val correct = when {
-                                state.showSolution -> baseAnswer.correct == answer.correct
-                                else -> null
-                            }
-                            val backgroundColor = when (correct) {
-                                true -> Color.Green.copy(alpha = 0.2f)
-                                false -> Color.Red.copy(alpha = 0.2f)
-                                else -> MaterialTheme.colors.surface
-                            }
-                            Card(
-                                backgroundColor = backgroundColor,
-                                modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)
-                                    .clickable {
-                                        if (!state.showSolution) viewModel.setAnswer(
-                                            answer.copy(
-                                                correct = !answer.correct
-                                            )
-                                        )
-                                    },
-                            ) {
-                                Row(verticalAlignment = Alignment.CenterVertically) {
-                                    if (state.showSolution) {
-                                        RadioButton(selected = baseAnswer.correct, onClick = { })
-                                    }
-                                    RadioButton(
-                                        selected = answer.correct,
-                                        onClick = {
-                                            if (!state.showSolution) {
-                                                viewModel.setAnswer(
-                                                    answer.copy(correct = !answer.correct)
-                                                )
-                                            }
-                                        }
-                                    )
-                                    Text(text = answer.description)
-                                }
-                            }
-                        }
+            QuestionsScreen(
+                modifier = Modifier.fillMaxWidth().padding(it).safeContentPadding(),
+                state = state,
+                onAnswerToggle = { answer -> viewModel.setAnswer(answer) },
+                onSubmit = { viewModel.submitAnswer(state.currentAnswers) },
+                onNext = { viewModel.setNewQuestion() },
+            )
+        }
+    }
+}
 
-                        Button(modifier = Modifier.align(Alignment.CenterHorizontally), onClick = {
-                            if (state.showSolution) {
-                                viewModel.setNewQuestion()
-                            } else {
-                                viewModel.submitAnswer(state.currentAnswers)
-                            }
-                        }) {
-                            val text = if (state.showSolution) "Next Question" else "Submit Answer"
-                            Text(text)
-                        }
+@Composable
+internal fun QuestionsScreen(
+    modifier: Modifier = Modifier,
+    state: QuestionsUIState,
+    onAnswerToggle: (Question.Answer) -> Unit = {},
+    onSubmit: () -> Unit = {},
+    onNext: () -> Unit = {},
+) {
+    Column(
+        modifier = modifier,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        val animatedAlpha by animateFloatAsState(targetValue = if (state.loading) 0.0f else 1f)
 
-                        // Show rationale when solution is displayed and rationale exists
-                        question.rationale?.let { rationale ->
-                            if (state.showSolution) {
-                                Spacer(modifier = Modifier.padding(8.dp))
-                                Card(
-                                    backgroundColor = MaterialTheme.colors.primary.copy(alpha = 0.1f),
-                                    modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp)
-                                ) {
-                                    Column(modifier = Modifier.padding(16.dp)) {
-                                        Text(
-                                            text = "Rationale:",
-                                            style = MaterialTheme.typography.subtitle1,
-                                            color = MaterialTheme.colors.primary
-                                        )
-                                        Spacer(modifier = Modifier.padding(4.dp))
-                                        Text(
-                                            text = rationale,
-                                            style = MaterialTheme.typography.body2
-                                        )
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+        StatsHeader(
+            shownQuestions = state.shownQuestions,
+            totalQuestions = state.totalQuestions,
+            correctAnswers = state.correctAnswers,
+            correctAnswerPercentage = state.userProgress.correctAnswerSessionPercentage
+        )
+
+        state.currentQuestion?.let { question ->
+            QuestionContent(
+                question = question,
+                currentAnswers = state.currentAnswers,
+                showSolution = state.showSolution,
+                animatedAlpha = animatedAlpha,
+                onAnswerToggle = onAnswerToggle,
+                onSubmit = onSubmit,
+                onNext = onNext,
+            )
         }
     }
 }

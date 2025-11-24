@@ -60,7 +60,6 @@ class QuestionsViewModelTest {
             DefaultQuestionSelectionStrategy()
         )
         viewModel.state.test {
-            awaitItem()
             val initial = awaitItem()
             assertTrue { initial.currentQuestion in questions }
         }
@@ -87,7 +86,6 @@ class QuestionsViewModelTest {
 
         // When Then
         viewModel.state.test {
-            awaitItem()
             viewModel.setNewQuestion()
             val initial = awaitItem()
             assertTrue { initial.currentQuestion in questions }
@@ -115,7 +113,6 @@ class QuestionsViewModelTest {
         // When
 
         viewModel.state.test {
-            awaitItem()
             val initial = awaitItem()
             assertTrue { initial.currentQuestion in questions }
             val currentQuestion = viewModel.state.value.currentQuestion!!
@@ -146,7 +143,6 @@ class QuestionsViewModelTest {
 
         // When
         viewModel.state.test {
-            awaitItem()
             val initial = awaitItem()
             assertTrue { initial.currentQuestion in questions }
             val currentQuestion = initial.currentQuestion!!

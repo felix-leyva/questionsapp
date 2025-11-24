@@ -7,14 +7,19 @@ import kotlin.time.ExperimentalTime
 @OptIn(ExperimentalTime::class)
 data class UserProgress(
     val answeredQuestions: Int = 0,
-    val correctAnswers: Int = 0,
+    val sessionCorrectAnswers: Int = 0,
     val shownQuestions: Int = 0,
     val totalQuestions: Int = 0,
+    val sessionShownQuestions: Int = 0,
     val totalSessionTime: Long = 0L,
     val lastUpdated: Long = kotlin.time.Clock.System.now().toEpochMilliseconds()
 ) {
+    val correctAnswerSessionPercentage = (when {
+        sessionShownQuestions == 0 -> 0.0
+        else -> sessionCorrectAnswers.toDouble() / sessionShownQuestions.toDouble()
+    } * 100).toInt()
     val correctAnswerRate: Double
-        get() = if (answeredQuestions > 0) correctAnswers.toDouble() / answeredQuestions else 0.0
+        get() = if (answeredQuestions > 0) sessionCorrectAnswers.toDouble() / answeredQuestions else 0.0
 
     val remainingQuestions: Int
         get() = maxOf(0, totalQuestions - shownQuestions)

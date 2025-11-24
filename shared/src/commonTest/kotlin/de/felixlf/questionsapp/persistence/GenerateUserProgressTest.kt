@@ -17,7 +17,7 @@ class GenerateUserProgressTest {
         val result = generateUserProgress(questionsData, 0, 0)
 
         assertEquals(0, result.answeredQuestions)
-        assertEquals(0, result.correctAnswers)
+        assertEquals(0, result.sessionCorrectAnswers)
         assertEquals(0.0, result.correctAnswerRate)
     }
 
@@ -34,7 +34,7 @@ class GenerateUserProgressTest {
         val result = generateUserProgress(questionsData, 3, 4)
 
         assertEquals(6, result.answeredQuestions) // 3 + 2 + 1
-        assertEquals(4, result.correctAnswers)   // 2 + 1 + 1
+        assertEquals(4, result.sessionCorrectAnswers)   // 2 + 1 + 1
         assertEquals(4.0 / 6.0, result.correctAnswerRate)
     }
 
@@ -50,7 +50,7 @@ class GenerateUserProgressTest {
         val result = generateUserProgress(questionsData, 2, 0)
 
         assertEquals(5, result.answeredQuestions)
-        assertEquals(0, result.correctAnswers)
+        assertEquals(0, result.sessionCorrectAnswers)
         assertEquals(0.0, result.correctAnswerRate)
     }
 }

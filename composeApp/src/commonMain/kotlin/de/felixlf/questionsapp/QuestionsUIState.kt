@@ -12,7 +12,7 @@ data class QuestionsUIState(
     val userProgress: UserProgress
 ) {
     val answeredQuestions: Int get() = userProgress.answeredQuestions
-    val correctAnswers: Int get() = userProgress.correctAnswers
+    val correctAnswers: Int get() = userProgress.sessionCorrectAnswers
     val shownQuestions: Int get() = userProgress.shownQuestions
     val totalQuestions: Int get() = userProgress.totalQuestions
     val remainingQuestions: Int get() = userProgress.remainingQuestions
