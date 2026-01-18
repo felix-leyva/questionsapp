@@ -3,7 +3,7 @@
 What is the primary reason for integrating multiple applications horizontally?
 
 - [ ] To reduce the total number of applications users must access.
-- [x] To avoid duplicating input and repetitive tasks, and to provide a unified access pattern.
+- [x] To avoid duplicating input and provide unified access patterns.
 - [ ] To guarantee each application operates in complete isolation.
 - [ ] To deliberately increase overall system architectural complexity.
 
@@ -11,9 +11,7 @@ What is the primary reason for integrating multiple applications horizontally?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Integration avoids duplicate input, repetitive tasks, and provides unified access
-patterns across applications. Application count reduction, isolation, and complexity increase aren't
-integration goals.
+**Rationale:** Integration avoids duplicate input, repetitive tasks, and provides unified access patterns across applications. Application count reduction, isolation, and complexity increase aren't integration goals.
 
 </p>
 </details>
@@ -22,8 +20,7 @@ integration goals.
 
 ## Question 2
 
-Which of the following are listed as the four basic options for integrating applications
-horizontally?
+Which of the following are listed as the four basic options for integrating applications horizontally?
 
 - [x] File Transfer
 - [x] Shared Database
@@ -36,9 +33,7 @@ horizontally?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** The four basic integration options are File Transfer, Shared Database, Remote
-Procedure Invocation, and Messaging. API Gateway and Event Streaming are specific implementation
-patterns, not the fundamental integration categories.
+**Rationale:** The four basic integration options are File Transfer, Shared Database, Remote Procedure Invocation, and Messaging. API Gateway and Event Streaming are specific implementation patterns, not the fundamental integration categories.
 
 </p>
 </details>
@@ -49,19 +44,16 @@ patterns, not the fundamental integration categories.
 
 What is the primary goal of integration in software architecture?
 
-- [ ] To ensure each application achieves complete independence.
-- [x] To allow multiple applications to work together seamlessly, avoiding duplicated input and
-  repetitive tasks.
-- [ ] To minimize the total number of enterprise applications.
-- [ ] To mandate a single unified technology stack.
+- [ ] To ensure each application achieves complete independence always.
+- [x] To allow applications to work together, avoiding duplication.
+- [ ] To minimize the total number of enterprise applications needed.
+- [ ] To mandate a single unified technology stack for everything.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Integration enables seamless multi-application cooperation, eliminating duplicate
-input and repetitive tasks. Complete independence, application reduction, and unified technology
-contradict integration's collaborative purpose.
+**Rationale:** Integration enables seamless multi-application cooperation, eliminating duplicate input and repetitive tasks. Complete independence, application reduction, and unified technology contradict integration's collaborative purpose.
 
 </p>
 </details>

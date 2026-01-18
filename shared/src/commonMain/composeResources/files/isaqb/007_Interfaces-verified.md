@@ -11,9 +11,7 @@ What is the fundamental purpose of an interface for a building block in software
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** An interface represents a well-defined access point for communication between
-building blocks or system elements. Encapsulation of state, implementation details, and white box
-relationships are separate architectural concerns.
+**Rationale:** An interface represents a well-defined access point for communication between building blocks or system elements. Encapsulation of state, implementation details, and white box relationships are separate architectural concerns.
 
 </p>
 </details>
@@ -22,8 +20,7 @@ relationships are separate architectural concerns.
 
 ## Question 2
 
-Which of the following aspects are necessary to make an interface "well-defined" according to the
-text?
+Which of the following aspects are necessary to make an interface "well-defined" according to the text?
 
 - [x] The syntax, data structures, and functional behavior.
 - [ ] The name of the lead developer who created it.
@@ -35,9 +32,7 @@ text?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** A well-defined interface requires technical specifications: syntax, data structures,
-functional and error behavior, non-functional properties, usage protocol, technology, and semantics.
-Developer names and costs are project metadata, not interface specifications.
+**Rationale:** A well-defined interface requires technical specifications: syntax, data structures, functional and error behavior, non-functional properties, usage protocol, technology, and semantics. Developer names and costs are project metadata, not interface specifications.
 
 </p>
 </details>
@@ -46,8 +41,7 @@ Developer names and costs are project metadata, not interface specifications.
 
 ## Question 6
 
-Which of the following properties are necessary to make an interface "well-defined" according to the
-text?
+Which of the following properties are necessary to make an interface "well-defined" according to the text?
 
 - [x] The syntax and data structures
 - [x] The functional behavior
@@ -62,10 +56,7 @@ text?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** A well-defined interface requires comprehensive technical specifications including
-syntax, data structures, behaviors, non-functional properties, protocols, and technology.
-Development cost and developer attribution are project management concerns, not interface
-definitions.
+**Rationale:** A well-defined interface requires comprehensive technical specifications including syntax, data structures, behaviors, non-functional properties, protocols, and technology. Development cost and developer attribution are project management concerns, not interface definitions.
 
 </p>
 </details>
@@ -85,9 +76,7 @@ In which scenario is the interface specified by the importer, and the exporter m
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Frameworks and plugins reverse the typical dependency, where the importer (framework)
-specifies the interface and exporters (plugins) must adapt to it. SOA contracts, dependency
-injection, and adapter patterns involve different interface ownership models.
+**Rationale:** Frameworks and plugins reverse the typical dependency, where the importer (framework) specifies the interface and exporters (plugins) must adapt to it. SOA contracts, dependency injection, and adapter patterns involve different interface ownership models.
 
 </p>
 </details>
@@ -98,19 +87,16 @@ injection, and adapter patterns involve different interface ownership models.
 
 What is the core principle of Postel's Law as it applies to interface development?
 
-- [ ] Be strict in validation on both input and output to ensure contract compliance.
-- [ ] Only accept data that perfectly matches the specification to prevent corruption.
-- [ ] Provide extensive output data regardless of what was requested for flexibility.
-- [x] Be precise and correct in what your interface provides, but be flexible and tolerant in what
-  it accepts from others.
+- [ ] Be strict in validation on both input and output for compliance.
+- [ ] Only accept data that perfectly matches the specification exactly.
+- [ ] Provide extensive output data regardless of what was requested.
+- [x] Be precise in what you provide, flexible in what you accept.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Postel's Law advocates being conservative in output (precise and correct) but liberal
-in input (flexible and tolerant). Strict validation on both sides, perfect-match requirements, and
-excessive output all contradict this robustness principle.
+**Rationale:** Postel's Law advocates being conservative in output (precise and correct) but liberal in input (flexible and tolerant). Strict validation on both sides, perfect-match requirements, and excessive output all contradict this robustness principle.
 
 </p>
 </details>
@@ -121,19 +107,16 @@ excessive output all contradict this robustness principle.
 
 What is the role of a tool like Swagger in interface development?
 
-- [ ] It automatically generates complete implementation code from interface specifications.
-- [ ] It provides runtime adapters for connecting incompatible interface versions.
-- [x] It helps describe interfaces in a structured way and can automatically generate and maintain
-  API documentation.
-- [ ] It is a framework for building reactive user interfaces with real-time updates.
+- [ ] It automatically generates complete implementation code from specifications.
+- [ ] It provides runtime adapters for connecting incompatible interfaces.
+- [x] It describes interfaces structurally and generates API documentation.
+- [ ] It is a framework for building reactive user interfaces in real-time.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Swagger describes interfaces in a structured format and generates/maintains API
-documentation. It doesn't generate full implementations, provide runtime adapters, or build user
-interfaces—those are separate tools and concerns.
+**Rationale:** Swagger describes interfaces in a structured format and generates/maintains API documentation. It doesn't generate full implementations, provide runtime adapters, or build user interfaces—those are separate tools and concerns.
 
 </p>
 </details>
@@ -154,9 +137,7 @@ According to the text, which parties can implement interfaces?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Interfaces can be implemented by the importer, exporter, or a third party depending
-on the architectural scenario. No single party has exclusive responsibility for interface
-implementation.
+**Rationale:** Interfaces can be implemented by the importer, exporter, or a third party depending on the architectural scenario. No single party has exclusive responsibility for interface implementation.
 
 </p>
 </details>
@@ -165,8 +146,7 @@ implementation.
 
 ## Question 8
 
-In the context of old systems where the importer and exporter have fixed but diverged ideas about an
-interface, what is needed to connect these interfaces?
+In the context of old systems where the importer and exporter have fixed but diverged ideas about an interface, what is needed to connect these interfaces?
 
 - [ ] A facade to simplify the complex legacy interface.
 - [x] An adapter.
@@ -177,9 +157,7 @@ interface, what is needed to connect these interfaces?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** An adapter bridges incompatible interfaces that have diverged over time. Facades
-simplify complexity, proxies control access, and mediators coordinate multiple parties—different
-patterns for different problems.
+**Rationale:** An adapter bridges incompatible interfaces that have diverged over time. Facades simplify complexity, proxies control access, and mediators coordinate multiple parties—different patterns for different problems.
 
 </p>
 </details>

@@ -26,9 +26,7 @@ fun main() {
         println("Step 2: Creating ComposeViewport...")
 
         ComposeViewport(document.body!!) {
-            KoinContext {
-                App()
-            }
+            App()
         }
 
         println("Step 3: ComposeViewport created successfully")

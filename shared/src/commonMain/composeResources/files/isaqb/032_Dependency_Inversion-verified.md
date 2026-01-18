@@ -3,18 +3,15 @@
 What is the Dependency Inversion Principle (DIP) primarily described as?
 
 - [ ] A mandatory rule that must be followed in all software designs.
-- [x] A technique or tool to be known and applied when needed, enabling other design patterns and
-  principles.
-- [ ] A method for eliminating classes from system design.
-- [ ] A way to remove all dependencies between software components completely.
+- [x] A technique to be applied when needed, enabling other patterns.
+- [ ] A method for eliminating classes from system design entirely.
+- [ ] A way to remove all dependencies between software components.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** DIP is a technique applied when needed to enable patterns and principles, not a
-universal rule. It doesn't eliminate classes or remove all dependencies—it inverts dependency
-direction through abstraction.
+**Rationale:** DIP is a technique applied when needed to enable patterns and principles, not a universal rule. It doesn't eliminate classes or remove all dependencies—it inverts dependency direction through abstraction.
 
 </p>
 </details>
@@ -25,19 +22,16 @@ direction through abstraction.
 
 In the context of DIP, what is being "inverted"?
 
-- [ ] The sequential order of function execution.
-- [ ] The directional flow of data within the system.
-- [x] The dependency arrow between a high-level policy and a detail function, by introducing an
-  abstraction that both depend on.
-- [ ] The assignment of error handling responsibility.
+- [ ] The sequential order of function execution within the system.
+- [ ] The directional flow of data within the system always.
+- [x] The dependency arrow by introducing abstractions both depend on.
+- [ ] The assignment of error handling responsibility to modules.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** DIP inverts dependency arrows by introducing abstractions: both high-level and
-low-level depend on the abstraction, reversing the dependency direction against control flow.
-Execution order, data flow, and error handling aren't what's inverted.
+**Rationale:** DIP inverts dependency arrows by introducing abstractions: both high-level and low-level depend on the abstraction, reversing the dependency direction against control flow. Execution order, data flow, and error handling aren't what's inverted.
 
 </p>
 </details>
@@ -46,8 +40,7 @@ Execution order, data flow, and error handling aren't what's inverted.
 
 ## Question 3
 
-What is one of the two practical incarnations of the Dependency Inversion Principle mentioned in the
-text?
+What is one of the two practical incarnations of the Dependency Inversion Principle mentioned in the text?
 
 - [ ] Aspect-Oriented Programming (AOP)
 - [x] Inversion of Control (IoC), also known as the Hollywood principle.
@@ -58,8 +51,7 @@ text?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** DIP incarnations include Inversion of Control (IoC/"Hollywood principle") and
-Dependency Injection. AOP, TDD, and DDD are valuable practices but not DIP incarnations.
+**Rationale:** DIP incarnations include Inversion of Control (IoC/"Hollywood principle") and Dependency Injection. AOP, TDD, and DDD are valuable practices but not DIP incarnations.
 
 </p>
 </details>
@@ -71,18 +63,15 @@ Dependency Injection. AOP, TDD, and DDD are valuable practices but not DIP incar
 What is the primary benefit of using "Constructor Injection" for dependency injection?
 
 - [ ] It permits dependencies to be modified anytime after construction.
-- [ ] It exclusively supports field-level dependency injection.
-- [x] It guarantees that components will have their dependencies set at the moment of construction,
-  making it harder to accidentally not provide them.
+- [ ] It exclusively supports field-level dependency injection only.
+- [x] It guarantees dependencies are set at construction, preventing omission.
 - [ ] It completely eliminates the requirement for external frameworks.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Constructor injection guarantees dependencies at construction time, preventing
-accidental omission. Post-construction modification, field injection exclusivity, and framework
-elimination aren't constructor injection benefits.
+**Rationale:** Constructor injection guarantees dependencies at construction time, preventing accidental omission. Post-construction modification, field injection exclusivity, and framework elimination aren't constructor injection benefits.
 
 </p>
 </details>
@@ -102,9 +91,7 @@ For which Domain-Driven Design (DDD) building blocks is dependency injection typ
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Dependency injection applies to Services, Factories, and Repositories (
-infrastructure), not Entities and Value Objects (domain model objects). Entities/Value Objects don't
-receive dependency injection.
+**Rationale:** Dependency injection applies to Services, Factories, and Repositories (infrastructure), not Entities and Value Objects (domain model objects). Entities/Value Objects don't receive dependency injection.
 
 </p>
 </details>
@@ -116,17 +103,15 @@ receive dependency injection.
 What is the core idea behind the Dependency Inversion Principle (DIP)?
 
 - [ ] High-level modules should depend directly on low-level modules.
-- [x] High-level modules should not depend on low-level modules. Both should depend on abstractions.
-- [ ] Abstractions should depend on implementation details.
+- [x] Both high and low-level modules should depend on abstractions.
+- [ ] Abstractions should depend on implementation details always.
 - [ ] All modules must be completely independent of each other.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** DIP: high-level and low-level modules both depend on abstractions, not each other.
-Direct high-to-low dependencies, abstractions depending on details, and complete independence all
-violate DIP principles.
+**Rationale:** DIP: high-level and low-level modules both depend on abstractions, not each other. Direct high-to-low dependencies, abstractions depending on details, and complete independence all violate DIP principles.
 
 </p>
 </details>
@@ -146,9 +131,7 @@ What is the "Hollywood principle" and how does it relate to Inversion of Control
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Hollywood principle ("Don't call us, we'll call you") explains IoC—framework calls
-your code, not vice versa. Software glamor, tight coupling, and direct control flow don't relate to
-IoC.
+**Rationale:** Hollywood principle ("Don't call us, we'll call you") explains IoC—framework calls your code, not vice versa. Software glamor, tight coupling, and direct control flow don't relate to IoC.
 
 </p>
 </details>
@@ -169,8 +152,7 @@ What are the three common ways to implement Dependency Injection?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Three common DI implementations: Constructor, Setter, and Field injection. Manual and
-Interface injection aren't standard DI implementation categories.
+**Rationale:** Three common DI implementations: Constructor, Setter, and Field injection. Manual and Interface injection aren't standard DI implementation categories.
 
 </p>
 </details>
@@ -181,19 +163,16 @@ Interface injection aren't standard DI implementation categories.
 
 What is a disadvantage of "Setter Injection" compared to "Constructor Injection"?
 
-- [ ] It significantly improves code readability and clarity.
-- [x] It allows for objects to be created without their dependencies, potentially leading to null
-  pointer exceptions if not handled carefully.
-- [ ] It provides less flexibility in dependency management.
-- [ ] It demands significantly more boilerplate code.
+- [ ] It significantly improves code readability and clarity always.
+- [x] Objects can be created without dependencies, risking null pointers.
+- [ ] It provides less flexibility in dependency management overall.
+- [ ] It demands significantly more boilerplate code to implement.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Setter injection allows object creation without dependencies, risking null pointer
-exceptions. Constructor injection prevents this by requiring dependencies at construction, though
-setter injection provides more flexibility, not less.
+**Rationale:** Setter injection allows object creation without dependencies, risking null pointer exceptions. Constructor injection prevents this by requiring dependencies at construction, though setter injection provides more flexibility, not less.
 
 </p>
 </details>

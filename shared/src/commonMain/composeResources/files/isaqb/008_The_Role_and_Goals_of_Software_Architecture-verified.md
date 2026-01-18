@@ -2,19 +2,16 @@
 
 How does software architecture support project management, according to the text?
 
-- [ ] By automatically generating work breakdown structures and resource allocations.
+- [ ] By automatically generating work breakdown structures and allocations.
 - [ ] By defining team roles and reporting hierarchies for the project.
-- [x] By allowing project management to schedule the development of various components and plan
-  tasks.
-- [ ] By establishing quality gates that replace traditional project milestones.
+- [x] By enabling scheduling of component development and task planning.
+- [ ] By establishing quality gates that replace traditional milestones.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Architecture enables project management to schedule component development and plan
-tasks based on the architectural structure. It doesn't generate WBS/resources, define team
-hierarchies, or replace project milestones—those are separate project management concerns.
+**Rationale:** Architecture enables project management to schedule component development and plan tasks based on the architectural structure. It doesn't generate WBS/resources, define team hierarchies, or replace project milestones—those are separate project management concerns.
 
 </p>
 </details>
@@ -35,9 +32,7 @@ Which of the following are listed as benefits of software architecture in develo
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Architecture bridges analysis and realization, manages complexity for stakeholders,
-and establishes the foundation for system quality. It doesn't intentionally increase complexity or
-guarantee schedule/budget outcomes—those depend on many other factors.
+**Rationale:** Architecture bridges analysis and realization, manages complexity for stakeholders, and establishes the foundation for system quality. It doesn't intentionally increase complexity or guarantee schedule/budget outcomes—those depend on many other factors.
 
 </p>
 </details>
@@ -48,19 +43,16 @@ guarantee schedule/budget outcomes—those depend on many other factors.
 
 What does the analogy "software development is an expedition" illustrate?
 
-- [ ] That software development follows a predictable waterfall sequence with clear phases.
-- [ ] That only the final deliverable matters, not the incremental milestones.
-- [x] That an agile, iterative approach allows for adaptation and avoids costly late changes
-  compared to a classical approach.
-- [ ] That comprehensive upfront planning eliminates the need for course corrections.
+- [ ] That software development follows a predictable waterfall sequence.
+- [ ] That only the final deliverable matters, not incremental milestones.
+- [x] That iterative approaches allow adaptation and avoid costly changes.
+- [ ] That comprehensive upfront planning eliminates course corrections.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** The expedition analogy illustrates how iterative approaches allow adaptation and
-reduce costs compared to rigid upfront planning. Waterfall sequences, ignoring milestones, and
-comprehensive upfront planning all contradict the adaptive, iterative nature of the analogy.
+**Rationale:** The expedition analogy illustrates how iterative approaches allow adaptation and reduce costs compared to rigid upfront planning. Waterfall sequences, ignoring milestones, and comprehensive upfront planning all contradict the adaptive, iterative nature of the analogy.
 
 </p>
 </details>
@@ -80,9 +72,7 @@ What are the primary, long-term quality characteristics that software architectu
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Architecture pursues long-term qualities: durability, maintainability, changeability,
-and extensibility, contrasting with pure functionality. Rapid delivery, immediate functionality, and
-initial cost efficiency are short-term project goals, not architectural quality characteristics.
+**Rationale:** Architecture pursues long-term qualities: durability, maintainability, changeability, and extensibility, contrasting with pure functionality. Rapid delivery, immediate functionality, and initial cost efficiency are short-term project goals, not architectural quality characteristics.
 
 </p>
 </details>
@@ -91,8 +81,7 @@ initial cost efficiency are short-term project goals, not architectural quality 
 
 ## Question 6
 
-Which of the following are primary, long-term quality characteristics that software architecture
-pursues?
+Which of the following are primary, long-term quality characteristics that software architecture pursues?
 
 - [x] Durability
 - [x] Maintainability
@@ -105,9 +94,7 @@ pursues?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Architecture focuses on long-term quality characteristics: durability,
-maintainability, changeability, and extensibility. Rapid implementation and cost minimization are
-short-term project goals that may conflict with architectural quality.
+**Rationale:** Architecture focuses on long-term quality characteristics: durability, maintainability, changeability, and extensibility. Rapid implementation and cost minimization are short-term project goals that may conflict with architectural quality.
 
 </p>
 </details>
@@ -118,20 +105,16 @@ short-term project goals that may conflict with architectural quality.
 
 How do the goals of software architecture typically contrast with general project goals?
 
-- [ ] They are always perfectly aligned with no inherent conflicts.
-- [ ] Architectural goals prioritize immediate feature delivery while project goals focus on
-  long-term stability.
+- [ ] They are always perfectly aligned with no inherent conflicts between them.
+- [ ] Architectural goals prioritize immediate delivery while project goals focus on stability.
 - [ ] There is no significant difference between architectural and project objectives.
-- [x] Architectural goals are usually long-term (e.g., maintainability), while project goals are
-  often short-term (e.g., implementing specific functionality).
+- [x] Architectural goals are long-term while project goals are often short-term.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Architectural goals focus on long-term qualities like maintainability, while project
-goals often emphasize short-term functionality delivery. This creates a natural tension, not perfect
-alignment, and the difference is significant and fundamental.
+**Rationale:** Architectural goals focus on long-term qualities like maintainability, while project goals often emphasize short-term functionality delivery. This creates a natural tension, not perfect alignment, and the difference is significant and fundamental.
 
 </p>
 </details>
@@ -142,18 +125,16 @@ alignment, and the difference is significant and fundamental.
 
 How does software architecture guide the implementation phase of a project?
 
-- [ ] By generating detailed pseudocode that developers translate to target languages.
-- [ ] By prescribing specific algorithms and data structures for each component.
-- [x] By providing architectural guidelines and rules that prevent chaotic implementation.
-- [ ] By creating automated code scaffolding that developers complete.
+- [ ] By generating detailed pseudocode that developers translate to languages.
+- [ ] By prescribing specific algorithms and data structures for components.
+- [x] By providing guidelines and rules that prevent chaotic implementation.
+- [ ] By creating automated code scaffolding that developers then complete.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Architecture provides guidelines and rules that guide implementation and prevent
-chaos. It doesn't generate pseudocode, prescribe specific algorithms, or create code
-scaffolding—those are implementation-level concerns beyond architectural scope.
+**Rationale:** Architecture provides guidelines and rules that guide implementation and prevent chaos. It doesn't generate pseudocode, prescribe specific algorithms, or create code scaffolding—those are implementation-level concerns beyond architectural scope.
 
 </p>
 </details>
@@ -164,20 +145,16 @@ scaffolding—those are implementation-level concerns beyond architectural scope
 
 What is the significance of software architecture for quality assurance?
 
-- [ ] It automates unit test generation from architectural specifications.
-- [x] It is of crucial importance for creating test plans and checking whether requirements have
-  been met.
-- [ ] It eliminates the need for integration testing through proper component isolation.
-- [ ] It focuses exclusively on performance testing while delegating functional testing to
-  developers.
+- [ ] It automates unit test generation from architectural specifications directly.
+- [x] It is crucial for creating test plans and verifying requirements.
+- [ ] It eliminates the need for integration testing through component isolation.
+- [ ] It focuses exclusively on performance testing, delegating functional testing.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Architecture is crucial for creating test plans and verifying requirements are met.
-It doesn't automate test generation, eliminate integration testing needs, or focus exclusively on
-performance—comprehensive QA requires multiple testing approaches.
+**Rationale:** Architecture is crucial for creating test plans and verifying requirements are met. It doesn't automate test generation, eliminate integration testing needs, or focus exclusively on performance—comprehensive QA requires multiple testing approaches.
 
 </p>
 </details>
@@ -186,8 +163,7 @@ performance—comprehensive QA requires multiple testing approaches.
 
 ## Question 9
 
-Which of the following factors are mentioned as influencing the evolution of software architecture
-during the development process?
+Which of the following factors are mentioned as influencing the evolution of software architecture during the development process?
 
 - [x] Changing requirements from customers.
 - [x] Influencing factors from the environment and other project stakeholders.
@@ -199,10 +175,7 @@ during the development process?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Architecture evolves based on changing customer requirements,
-environmental/stakeholder influences, and architect evaluation. Fixed design documents contradict
-evolutionary adaptation, and marketing preferences aren't mentioned as architectural influencing
-factors.
+**Rationale:** Architecture evolves based on changing customer requirements, environmental/stakeholder influences, and architect evaluation. Fixed design documents contradict evolutionary adaptation, and marketing preferences aren't mentioned as architectural influencing factors.
 
 </p>
 </details>

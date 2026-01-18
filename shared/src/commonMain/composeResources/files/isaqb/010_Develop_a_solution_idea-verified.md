@@ -1,7 +1,6 @@
 ## Question 1
 
-What are the fundamental questions an architect should answer to develop an initial solution idea,
-as outlined in the text?
+What are the fundamental questions an architect should answer to develop an initial solution idea, as outlined in the text?
 
 - [ ] What is the project budget and resource allocation plan?
 - [x] What is the core task of the system and who uses it?
@@ -14,9 +13,7 @@ as outlined in the text?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Key questions focus on core task, users, interfaces, data management, and control
-mechanisms—architectural fundamentals. Budget, methodology, and team structure are project
-management concerns addressed separately from initial solution ideation.
+**Rationale:** Key questions focus on core task, users, interfaces, data management, and control mechanisms—architectural fundamentals. Budget, methodology, and team structure are project management concerns addressed separately from initial solution ideation.
 
 </p>
 </details>
@@ -25,8 +22,7 @@ management concerns addressed separately from initial solution ideation.
 
 ## Question 2
 
-When identifying the users of a system, which of the following groups should an architect consider
-in addition to the users of the core functionality?
+When identifying the users of a system, which of the following groups should an architect consider in addition to the users of the core functionality?
 
 - [ ] The executive sponsors and budget holders.
 - [x] Administrators and operators.
@@ -38,9 +34,7 @@ in addition to the users of the core functionality?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Beyond core users, consider administrators, operators, special function users (
-approvers/reviewers), and those resistant to change. Executives, marketing, and sales are
-stakeholders but not direct system users with architectural implications.
+**Rationale:** Beyond core users, consider administrators, operators, special function users (approvers/reviewers), and those resistant to change. Executives, marketing, and sales are stakeholders but not direct system users with architectural implications.
 
 </p>
 </details>
@@ -61,9 +55,7 @@ Which of the following are described in the text as distinct types of system usa
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** The text identifies interactive online, background/batch, and embedded systems as
-distinct usage types. Analytics dashboards and microservices describe architectural patterns, not
-fundamental system usage classifications.
+**Rationale:** The text identifies interactive online, background/batch, and embedded systems as distinct usage types. Analytics dashboards and microservices describe architectural patterns, not fundamental system usage classifications.
 
 </p>
 </details>
@@ -72,8 +64,7 @@ fundamental system usage classifications.
 
 ## Question 4
 
-When an architect is considering how a system will manage its data, which of the following are
-influential aspects mentioned in the text?
+When an architect is considering how a system will manage its data, which of the following are influential aspects mentioned in the text?
 
 - [ ] The geographic distribution of data centers for disaster recovery.
 - [x] Data volume and license costs.
@@ -85,9 +76,7 @@ influential aspects mentioned in the text?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Data management considerations include volume, costs, performance, parallel access,
-integrity, and recoverability. Geographic distribution and vendor market share are infrastructure
-and procurement concerns, not core data management architectural aspects.
+**Rationale:** Data management considerations include volume, costs, performance, parallel access, integrity, and recoverability. Geographic distribution and vendor market share are infrastructure and procurement concerns, not core data management architectural aspects.
 
 </p>
 </details>
@@ -96,8 +85,7 @@ and procurement concerns, not core data management architectural aspects.
 
 ## Question 5
 
-What type of system control is described as being located *outside* the system, for example, at a
-module that receives keystrokes or mouse clicks?
+What type of system control is described as being located *outside* the system, for example, at a module that receives keystrokes or mouse clicks?
 
 - [ ] Asynchronous message-driven control
 - [ ] Hierarchical layered control
@@ -108,9 +96,7 @@ module that receives keystrokes or mouse clicks?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Event-driven control is located outside the system (e.g., keyboard/mouse handlers).
-Asynchronous messaging, hierarchical layers, and service orientation describe different
-architectural patterns for organizing system structure and communication.
+**Rationale:** Event-driven control is located outside the system (e.g., keyboard/mouse handlers). Asynchronous messaging, hierarchical layers, and service orientation describe different architectural patterns for organizing system structure and communication.
 
 </p>
 </details>
@@ -121,19 +107,16 @@ architectural patterns for organizing system structure and communication.
 
 When describing the core task of a system, what is recommended?
 
-- [ ] To enumerate all functional requirements from the specification.
-- [x] To describe it in two or three sentences, formulated positively, using core terms of the
-  domain.
-- [ ] To detail the technical architecture and component interactions.
+- [ ] To enumerate all functional requirements from the specification document.
+- [x] To describe it in two or three sentences using domain terminology.
+- [ ] To detail the technical architecture and all component interactions.
 - [ ] To catalog all planned features across all development phases.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Core task should be concise (2-3 sentences), positive, using domain terminology.
-Enumerating requirements, detailing architecture, or cataloging features are different documentation
-activities that miss the point of a succinct core task statement.
+**Rationale:** Core task should be concise (2-3 sentences), positive, using domain terminology. Enumerating requirements, detailing architecture, or cataloging features are different documentation activities that miss the point of a succinct core task statement.
 
 </p>
 </details>
@@ -154,9 +137,7 @@ What are some questions an architect should ask regarding user interfaces?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Architectural questions address interface types, interaction modes (
-console/CLI/hardware), and customization needs for different users. CSS frameworks and developer
-availability are implementation and resource concerns, not architectural interface questions.
+**Rationale:** Architectural questions address interface types, interaction modes (console/CLI/hardware), and customization needs for different users. CSS frameworks and developer availability are implementation and resource concerns, not architectural interface questions.
 
 </p>
 </details>
@@ -167,20 +148,16 @@ availability are implementation and resource concerns, not architectural interfa
 
 What is the difference between procedural control and parallel control in a system?
 
-- [ ] Procedural control uses multiple concurrent threads, while parallel control is
-  single-threaded.
-- [x] Procedural control originates from a function block sequentially calling others, while
-  parallel control involves several independent blocks reacting to events or requests.
-- [ ] Procedural control is managed by external orchestrators, while parallel control is internal.
-- [ ] There is no significant difference; they are implementation variations of the same concept.
+- [ ] Procedural control uses multiple concurrent threads while parallel is single-threaded.
+- [x] Procedural control calls blocks sequentially; parallel has independent reacting blocks.
+- [ ] Procedural control is managed by external orchestrators; parallel control is internal.
+- [ ] There is no significant difference; they are variations of the same concept.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Procedural control means sequential calls from a central function block, while
-parallel control means independent blocks reacting to events/requests. The distinction is about
-control flow organization, not threading, external orchestration, or implementation details.
+**Rationale:** Procedural control means sequential calls from a central function block, while parallel control means independent blocks reacting to events/requests. The distinction is about control flow organization, not threading, external orchestration, or implementation details.
 
 </p>
 </details>

@@ -4,17 +4,14 @@ What is a primary benefit of using messaging software for integrating legacy or 
 
 - [ ] It forces all systems to adopt single unified technology stacks.
 - [ ] It completely eliminates all data transformation requirements.
-- [x] It allows systems with different technical fits and levels of abstraction to communicate
-  effectively.
+- [x] It allows systems with different technical fits and levels of abstraction to communicate effectively.
 - [ ] It automatically resolves all semantic interpretation differences.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Messaging middleware bridges independently developed systems with different technical
-fits and abstraction levels. It doesn't enforce technology uniformity, eliminate transformations, or
-auto-resolve semantic differences.
+**Rationale:** Messaging middleware bridges independently developed systems with different technical fits and abstraction levels. It doesn't enforce technology uniformity, eliminate transformations, or auto-resolve semantic differences.
 
 </p>
 </details>
@@ -25,19 +22,16 @@ auto-resolve semantic differences.
 
 What is the purpose of "Enrichment" in the context of message processing for integration?
 
-- [ ] To compress messages for faster transfer speeds.
-- [ ] To encrypt messages for enhanced security protection.
-- [x] To add missing information to a message (e.g., full customer details from an ID) so the
-  receiving system has all necessary context.
-- [ ] To remove sensitive data before transmission.
+- [ ] To compress messages for faster transfer speeds overall.
+- [ ] To encrypt messages for enhanced security protection always.
+- [x] To add missing information (e.g., full customer details).
+- [ ] To remove sensitive data before transmission occurs.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Enrichment adds missing information (e.g., expanding customer ID to full details)
-providing complete context for receivers. Compression, encryption, and data removal serve different
-purposes.
+**Rationale:** Enrichment adds missing information (e.g., expanding customer ID to full details) providing complete context for receivers. Compression, encryption, and data removal serve different purposes.
 
 </p>
 </details>
@@ -48,18 +42,16 @@ purposes.
 
 What is the role of "Conversion" in the message processing example?
 
-- [ ] To convert messages into human-readable text formats.
-- [x] To transform the message into a format that the receiving system can understand and process.
+- [ ] To convert messages into human-readable text formats only.
+- [x] To transform messages into receiver-compatible formats.
 - [ ] To convert from asynchronous to synchronous message formats.
-- [ ] To convert messages into different human languages.
+- [ ] To convert messages into different human languages always.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Conversion transforms messages into receiver-compatible formats (e.g., converting to
-Sparks format for Vessel Planning System). Human readability, sync/async conversion, and language
-translation are separate concerns.
+**Rationale:** Conversion transforms messages into receiver-compatible formats (e.g., converting to Sparks format for Vessel Planning System). Human readability, sync/async conversion, and language translation are separate concerns.
 
 </p>
 </details>
@@ -71,8 +63,7 @@ translation are separate concerns.
 Into which six different groups do these message integration patterns primarily fall?
 
 - [ ] Security, Performance, Scalability, Reliability, Usability, and Maintainability.
-- [x] Message construction, Routing, Message transformation, System management, Messaging channels,
-  and Endpoints.
+- [x] Message construction, Routing, Message transformation, System management, Messaging channels, and Endpoints.
 - [ ] Data transfer, Remote procedure calls, Shared databases, File transfer, APIs, and Webhooks.
 - [ ] Front-end, Back-end, Database, Network, Cloud, and On-premise.
 
@@ -80,9 +71,7 @@ Into which six different groups do these message integration patterns primarily 
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Message integration patterns fall into six groups: construction, routing,
-transformation, system management, messaging channels, and endpoints. Quality attributes,
-integration methods, and deployment tiers represent different categorizations.
+**Rationale:** Message integration patterns fall into six groups: construction, routing, transformation, system management, messaging channels, and endpoints. Quality attributes, integration methods, and deployment tiers represent different categorizations.
 
 </p>
 </details>
@@ -102,9 +91,7 @@ What is the purpose of a "Message Router" in the context of message integration?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Message Routers direct messages to correct recipients based on criteria (content,
-headers). Format conversion, information enrichment, and persistent storage are separate pattern
-responsibilities.
+**Rationale:** Message Routers direct messages to correct recipients based on criteria (content, headers). Format conversion, information enrichment, and persistent storage are separate pattern responsibilities.
 
 </p>
 </details>
@@ -124,9 +111,7 @@ What is the role of a "Message Filter" in message integration?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Message Filters select messages based on criteria, allowing only relevant ones
-through. Content modification, message aggregation, and sequence guarantees are different pattern
-concerns.
+**Rationale:** Message Filters select messages based on criteria, allowing only relevant ones through. Content modification, message aggregation, and sequence guarantees are different pattern concerns.
 
 </p>
 </details>
@@ -135,12 +120,10 @@ concerns.
 
 ## Question 8
 
-What is the primary challenge when integrating systems that have different technical fits and levels
-of abstraction?
+What is the primary challenge when integrating systems that have different technical fits and levels of abstraction?
 
 - [ ] They cannot be integrated under any circumstances.
-- [x] They require a robust integration mechanism like message-oriented middleware to bridge these
-  differences.
+- [x] They require a robust integration mechanism like message-oriented middleware to bridge these differences.
 - [ ] They can only integrate using file transfer methods.
 - [ ] They must be completely rewritten to match.
 
@@ -148,9 +131,7 @@ of abstraction?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Different technical fits and abstraction levels require robust middleware (like
-message-oriented) to bridge differences. Integration is possible (not impossible), not limited to
-file transfer, and doesn't require rewrites.
+**Rationale:** Different technical fits and abstraction levels require robust middleware (like message-oriented) to bridge differences. Integration is possible (not impossible), not limited to file transfer, and doesn't require rewrites.
 
 </p>
 </details>

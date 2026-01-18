@@ -2,19 +2,16 @@
 
 What does ATAM stand for, and what is its primary focus?
 
-- [ ] Agile Team Assessment Method; focuses on team performance.
-- [x] Architectural Trade-off Analysis Method; focuses on how well the architecture meets quality
-  requirements and trade-offs between competing objectives.
-- [ ] Automated Testing and Analysis Method; focuses on automated testing.
-- [ ] Architecture Technical Assessment Model; focuses on technical implementation details.
+- [ ] Agile Team Assessment Method; team performance.
+- [x] Architectural Trade-off Analysis Method; quality.
+- [ ] Automated Testing and Analysis; testing focus.
+- [ ] Architecture Technical Assessment; implementation.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** ATAM (Architectural Trade-off Analysis Method) focuses on quality requirement
-fulfillment and trade-off identification between competing objectives. Team performance, automated
-testing, and technical implementation are separate assessment concerns.
+**Rationale:** ATAM (Architectural Trade-off Analysis Method) focuses on quality requirement fulfillment and trade-off identification between competing objectives. Team performance, automated testing, and technical implementation are separate assessment concerns.
 
 </p>
 </details>
@@ -26,18 +23,15 @@ testing, and technical implementation are separate assessment concerns.
 What is a key characteristic of the ATAM method regarding stakeholder involvement?
 
 - [ ] Only the development team is involved.
-- [x] It involves not only the development team or architects but also relevant stakeholders of the
-  system.
+- [x] Developers, architects, and stakeholders.
 - [ ] Only external experts are involved.
-- [ ] Stakeholders are only informed after the evaluation is complete.
+- [ ] Stakeholders informed after evaluation.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** ATAM involves development team, architects, AND system stakeholders. Team-only,
-experts-only, and post-evaluation-only stakeholder involvement all miss ATAM's collaborative
-multi-stakeholder evaluation approach.
+**Rationale:** ATAM involves development team, architects, AND system stakeholders. Team-only, experts-only, and post-evaluation-only stakeholder involvement all miss ATAM's collaborative multi-stakeholder evaluation approach.
 
 </p>
 </details>
@@ -57,10 +51,7 @@ What are the four phases of the ATAM workshop format?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** ATAM phases are Presentation, Architectural Approaches Identification, Test, and
-Results Presentation. Planning/design/implementation/testing,
-requirements/analysis/design/deployment, and brainstorming/prototyping/evaluation/refinement are
-development lifecycle phases, not ATAM phases.
+**Rationale:** ATAM phases are Presentation, Architectural Approaches Identification, Test, and Results Presentation. Planning/design/implementation/testing, requirements/analysis/design/deployment, and brainstorming/prototyping/evaluation/refinement are development lifecycle phases, not ATAM phases.
 
 </p>
 </details>
@@ -72,18 +63,15 @@ development lifecycle phases, not ATAM phases.
 What is the role of the "evaluation team" in ATAM?
 
 - [ ] To implement the software.
-- [x] To consist of impartial external experts who introduce the method and clarify quality
-  requirements.
-- [ ] To define the business goals of the system.
+- [x] Impartial external experts for method.
+- [ ] To define the business goals.
 - [ ] To present the high-level architecture.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Evaluation team consists of impartial external experts introducing ATAM and
-clarifying quality requirements. Software implementation, business goal definition, and architecture
-presentation are project team responsibilities, not evaluation team roles.
+**Rationale:** Evaluation team consists of impartial external experts introducing ATAM and clarifying quality requirements. Software implementation, business goal definition, and architecture presentation are project team responsibilities, not evaluation team roles.
 
 </p>
 </details>
@@ -95,17 +83,15 @@ presentation are project team responsibilities, not evaluation team roles.
 What is the role of stakeholders in the "presentation phase" of ATAM?
 
 - [ ] To present the high-level architecture.
-- [x] To present the business goals and business drivers to the workshop participants.
+- [x] To present business goals and drivers.
 - [ ] To identify architectural approaches.
-- [ ] To evaluate the architecture against scenarios.
+- [ ] To evaluate architecture against scenarios.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Stakeholders present business goals and drivers in the presentation phase.
-Architecture presentation (architect role), approach identification (phase two activity), and
-scenario evaluation (later phase) are separate ATAM activities.
+**Rationale:** Stakeholders present business goals and drivers in the presentation phase. Architecture presentation (architect role), approach identification (phase two activity), and scenario evaluation (later phase) are separate ATAM activities.
 
 </p>
 </details>
@@ -117,7 +103,7 @@ scenario evaluation (later phase) are separate ATAM activities.
 What is the role of the architect in the "presentation phase" of ATAM?
 
 - [ ] To define the quality requirements.
-- [x] To present the high-level architecture of the system, considering the business objectives.
+- [x] To present high-level architecture.
 - [ ] To identify risks and non-risks.
 - [ ] To lead the evaluation team.
 
@@ -125,9 +111,7 @@ What is the role of the architect in the "presentation phase" of ATAM?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Architects present high-level architecture considering business objectives in
-presentation phase. Quality requirement definition, risk identification (later phases), and
-evaluation team leadership (evaluation team role) are separate ATAM activities.
+**Rationale:** Architects present high-level architecture considering business objectives in presentation phase. Quality requirement definition, risk identification (later phases), and evaluation team leadership (evaluation team role) are separate ATAM activities.
 
 </p>
 </details>
@@ -139,7 +123,7 @@ evaluation team leadership (evaluation team role) are separate ATAM activities.
 What happens in "Phase two" of ATAM, after the presentation phase?
 
 - [ ] The final results are presented.
-- [x] Architectural approaches are identified, and scenarios and quality trees are created.
+- [x] Approaches, scenarios, quality trees created.
 - [ ] The system is deployed to production.
 - [ ] The project budget is finalized.
 
@@ -147,9 +131,7 @@ What happens in "Phase two" of ATAM, after the presentation phase?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Phase two identifies architectural approaches (patterns, styles) and creates
-scenarios/quality trees. Final results (last phase), production deployment, and budget finalization
-are separate project activities.
+**Rationale:** Phase two identifies architectural approaches (patterns, styles) and creates scenarios/quality trees. Final results (last phase), production deployment, and budget finalization are separate project activities.
 
 </p>
 </details>
@@ -161,18 +143,15 @@ are separate project activities.
 What is the purpose of the "Test" phase in ATAM?
 
 - [ ] To perform unit tests on the code.
-- [x] To create more scenarios to test whether the architecture can fulfill them, often involving
-  additional stakeholders.
-- [ ] To deploy the system to a test environment.
-- [ ] To gather user feedback on the implemented system.
+- [x] To create more test scenarios.
+- [ ] To deploy to a test environment.
+- [ ] To gather user feedback on system.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Test phase creates additional scenarios with additional stakeholders to test
-architecture fulfillment capability. Unit tests, test deployment, and user feedback are software
-testing activities, not ATAM test phase purposes.
+**Rationale:** Test phase creates additional scenarios with additional stakeholders to test architecture fulfillment capability. Unit tests, test deployment, and user feedback are software testing activities, not ATAM test phase purposes.
 
 </p>
 </details>
@@ -195,10 +174,7 @@ What are the key benefits gained from conducting an ATAM evaluation?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** ATAM benefits include early risk identification, quality requirement definition help,
-better documentation (revealed decisions), improved stakeholder communication, and higher
-architecture quality. Bug-free guarantees and maintenance elimination are unrealistic—ATAM improves
-quality but doesn't eliminate all issues.
+**Rationale:** ATAM benefits include early risk identification, quality requirement definition help, better documentation (revealed decisions), improved stakeholder communication, and higher architecture quality. Bug-free guarantees and maintenance elimination are unrealistic—ATAM improves quality but doesn't eliminate all issues.
 
 </p>
 </details>

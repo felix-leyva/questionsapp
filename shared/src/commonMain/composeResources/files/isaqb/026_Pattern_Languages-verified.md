@@ -3,17 +3,15 @@
 What is the primary purpose of a "pattern language" in software architecture?
 
 - [ ] To establish user interface design standards and conventions.
-- [ ] To specify which programming language should be used.
-- [x] To provide guidance on the detail level of code structure, even within architectural layers,
-  to avoid chaos and cycles.
-- [ ] To fully automate software development processes.
+- [ ] To specify which programming language should be used always.
+- [x] To guide detailed code structure within layers, avoiding chaos.
+- [ ] To fully automate software development processes entirely.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Pattern languages guide detailed code structure within layers to prevent chaos and
-cycles. They don't define UI standards, specify programming languages, or automate development.
+**Rationale:** Pattern languages guide detailed code structure within layers to prevent chaos and cycles. They don't define UI standards, specify programming languages, or automate development.
 
 </p>
 </details>
@@ -33,9 +31,7 @@ In Domain-Driven Design (DDD), what is the key characteristic of an "Entity"?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Entities have identity, modifiable state, and are usually persistent. Immutability
-characterizes Value Objects, procedures define Services, and persistence is Repository
-responsibility.
+**Rationale:** Entities have identity, modifiable state, and are usually persistent. Immutability characterizes Value Objects, procedures define Services, and persistence is Repository responsibility.
 
 </p>
 </details>
@@ -46,19 +42,16 @@ responsibility.
 
 What is the main difference between an "Entity" and a "Value Object" in DDD?
 
-- [ ] Entities are stateless while Value Objects maintain state.
-- [x] Entities have an identity and can change, while Value Objects have no identity and are
-  strictly immutable.
-- [ ] Value Objects require persistence while Entities don't.
-- [ ] Entities handle technical concerns while Value Objects handle business logic.
+- [ ] Entities are stateless while Value Objects maintain state always.
+- [x] Entities have identity and change; Value Objects are immutable.
+- [ ] Value Objects require persistence while Entities don't need it.
+- [ ] Entities handle technical concerns; Value Objects handle business.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Entities have identity and mutability; Value Objects lack identity and are immutable.
-Entities hold state (not stateless), both can be persistent, and both are domain concepts, not
-technical ones.
+**Rationale:** Entities have identity and mutability; Value Objects lack identity and are immutable. Entities hold state (not stateless), both can be persistent, and both are domain concepts, not technical ones.
 
 </p>
 </details>
@@ -69,19 +62,16 @@ technical ones.
 
 What is the role of a "Service" in DDD tactical design building blocks?
 
-- [ ] To persist and retrieve entities from storage systems.
-- [x] To perform procedures that cannot be implemented as methods of entities or value objects, and
-  they are strictly stateless.
-- [ ] To encapsulate complex object instantiation processes.
-- [ ] To represent the immutable identity of entities.
+- [ ] To persist and retrieve entities from storage systems always.
+- [x] To perform stateless procedures not belonging to entities.
+- [ ] To encapsulate complex object instantiation processes only.
+- [ ] To represent the immutable identity of entities directly.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Services perform procedures (often involving multiple entities) that don't belong to
-entities/value objects, and are stateless. Persistence is Repositories, instantiation is Factories,
-identity is Entity characteristic.
+**Rationale:** Services perform procedures (often involving multiple entities) that don't belong to entities/value objects, and are stateless. Persistence is Repositories, instantiation is Factories, identity is Entity characteristic.
 
 </p>
 </details>
@@ -92,18 +82,16 @@ identity is Entity characteristic.
 
 What is an "Aggregate" in DDD, and what is its purpose?
 
-- [ ] A collection of unrelated entities grouped for convenience.
-- [ ] A specialized service handling complex business rules.
-- [x] The smallest unit for storing and loading entities through a repository, always based on a
-  root entity.
+- [ ] A collection of unrelated entities grouped for convenience only.
+- [ ] A specialized service handling complex business rules directly.
+- [x] The smallest persistence unit based on a root entity.
 - [ ] A creational pattern for manufacturing new object instances.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Aggregates are the smallest persistence unit accessed through repositories, based on
-a root entity. They're not unrelated collections, services, or generic creational patterns.
+**Rationale:** Aggregates are the smallest persistence unit accessed through repositories, based on a root entity. They're not unrelated collections, services, or generic creational patterns.
 
 </p>
 </details>
@@ -123,9 +111,7 @@ What is the primary characteristic of a "Value Object" in Domain-Driven Design (
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Value Objects lack identity, represent pure values, and are immutable.
-Identity/modification characterize Entities, complex logic defines Services, and persistence is
-Repository responsibility.
+**Rationale:** Value Objects lack identity, represent pure values, and are immutable. Identity/modification characterize Entities, complex logic defines Services, and persistence is Repository responsibility.
 
 </p>
 </details>
@@ -145,8 +131,7 @@ What is the rule regarding state for "Services" in DDD?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Services are strictly stateless—state is privileged only to Entities and Value
-Objects, not Services. Services coordinate but don't hold state.
+**Rationale:** Services are strictly stateless—state is privileged only to Entities and Value Objects, not Services. Services coordinate but don't hold state.
 
 </p>
 </details>
@@ -158,17 +143,15 @@ Objects, not Services. Services coordinate but don't hold state.
 What is the role of "Factories" in DDD tactical design building blocks?
 
 - [ ] To implement business logic unsuitable for other components.
-- [x] To encapsulate the potentially complex instantiation process of entities or value objects.
-- [ ] To manage entity persistence to database systems.
-- [ ] To represent the fixed immutable identity of entities.
+- [x] To encapsulate complex instantiation of entities or value objects.
+- [ ] To manage entity persistence to database systems directly.
+- [ ] To represent the fixed immutable identity of entities always.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Factories encapsulate complex instantiation for entities/value objects. Business
-logic belongs in Services/Entities, persistence in Repositories, and identity is an Entity
-attribute.
+**Rationale:** Factories encapsulate complex instantiation for entities/value objects. Business logic belongs in Services/Entities, persistence in Repositories, and identity is an Entity attribute.
 
 </p>
 </details>
@@ -179,19 +162,16 @@ attribute.
 
 What is the responsibility of "Repositories" in DDD?
 
-- [ ] To define and enforce business domain rules.
-- [x] To persist entities, responsible for loading and storing an entity for use across
-  transactions, and performing transformations for database storage.
+- [ ] To define and enforce business domain rules always.
+- [x] To persist entities, loading and storing across transactions.
 - [ ] To manage user interface interactions and presentation.
-- [ ] To control the lifecycle of value objects.
+- [ ] To control the lifecycle of value objects entirely.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Repositories handle entity persistence, loading/storing across transactions, and
-database transformations. Business rules are in Entities/Services, UI is separate, and Value Objects
-don't have managed lifecycles.
+**Rationale:** Repositories handle entity persistence, loading/storing across transactions, and database transformations. Business rules are in Entities/Services, UI is separate, and Value Objects don't have managed lifecycles.
 
 </p>
 </details>
@@ -200,22 +180,18 @@ don't have managed lifecycles.
 
 ## Question 10
 
-How does the pattern language of Domain-Driven Design (DDD) apply to a typical technical layered
-architecture?
+How does the pattern language of Domain-Driven Design (DDD) apply to a typical technical layered architecture?
 
-- [ ] It completely replaces layered architecture with domain-centric organization.
-- [ ] It applies exclusively to the presentation layer components.
-- [x] It applies mostly to the domain layer of the layered architecture, helping to avoid cycles
-  even within a layer.
-- [ ] It prescribes specific technology choices for all layers.
+- [ ] It completely replaces layered architecture with domain-centric style.
+- [ ] It applies exclusively to the presentation layer components only.
+- [x] It applies mostly to the domain layer, avoiding intra-layer cycles.
+- [ ] It prescribes specific technology choices for all layers always.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** DDD pattern language applies primarily to the domain layer, helping avoid intra-layer
-cycles. It doesn't replace layered architecture, apply only to presentation, or dictate technology
-choices.
+**Rationale:** DDD pattern language applies primarily to the domain layer, helping avoid intra-layer cycles. It doesn't replace layered architecture, apply only to presentation, or dictate technology choices.
 
 </p>
 </details>

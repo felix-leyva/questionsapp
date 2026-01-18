@@ -1,11 +1,9 @@
 ## Question 1
 
-What is the primary reason for the existence of Service-Oriented Architecture (SOA), according to
-the text?
+What is the primary reason for the existence of Service-Oriented Architecture (SOA), according to the text?
 
 - [ ] To solve purely technical problems related to system performance.
-- [x] To address a business problem: the need for flexible reuse of existing monolithic systems to
-  react to market pressures.
+- [x] To address business needs for flexible reuse of monolithic systems.
 - [ ] To enable greenfield development without any legacy constraints.
 - [ ] To reduce IT budgets by eliminating new feature development.
 
@@ -13,9 +11,7 @@ the text?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** SOA exists to address business problems—flexible reuse of existing monolithic systems
-for market responsiveness. It's not purely technical, greenfield-focused, or budget reduction
-through feature elimination.
+**Rationale:** SOA exists to address business problems—flexible reuse of existing monolithic systems for market responsiveness. It's not purely technical, greenfield-focused, or budget reduction through feature elimination.
 
 </p>
 </details>
@@ -26,19 +22,16 @@ through feature elimination.
 
 Which of the following are key characteristics of services in a Service-Oriented Architecture?
 
-- [ ] They are tightly coupled and centrally managed.
-- [x] They are designed as integral units, loosely coupled, independently operated, managed, and
-  maintained.
+- [ ] They are tightly coupled and centrally managed always.
+- [x] They are integral units, loosely coupled, independently managed.
 - [ ] They expose internal implementation details to all consumers.
-- [ ] They are accessed exclusively through proprietary non-standard protocols.
+- [ ] They are accessed exclusively through proprietary protocols.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** SOA services are integral units: loosely coupled, independently
-operated/managed/maintained, and encapsulated. They aren't tightly coupled, don't expose internals,
-and use open standards, not proprietary protocols.
+**Rationale:** SOA services are integral units: loosely coupled, independently operated/managed/maintained, and encapsulated. They aren't tightly coupled, don't expose internals, and use open standards, not proprietary protocols.
 
 </p>
 </details>
@@ -61,9 +54,7 @@ Which of the following are key characteristics of services in SOA? (Select all t
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** SOA services are integral units, loosely coupled, independently
-operated/managed/maintained, and encapsulated. Tight coupling and central management contradict
-SOA's distributed, autonomous service principles.
+**Rationale:** SOA services are integral units, loosely coupled, independently operated/managed/maintained, and encapsulated. Tight coupling and central management contradict SOA's distributed, autonomous service principles.
 
 </p>
 </details>
@@ -74,19 +65,16 @@ SOA's distributed, autonomous service principles.
 
 How do services in SOA typically expose their functionality to consumers?
 
-- [ ] By allowing direct database access to internal data.
-- [ ] Through legacy host-specific integration methods.
-- [x] Using modern open standards like JSON, XML, SOAP, and HTTP, with a service contract describing
-  the functionality.
+- [ ] By allowing direct database access to internal data stores.
+- [ ] Through legacy host-specific integration methods exclusively.
+- [x] Using open standards (JSON, XML, SOAP, HTTP) with contracts.
 - [ ] By providing graphical user interfaces for direct interaction.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** SOA services use modern open standards (JSON, XML, SOAP, HTTP) with service contracts
-describing functionality. Direct database access, legacy methods, and GUIs contradict SOA
-encapsulation and standardization principles.
+**Rationale:** SOA services use modern open standards (JSON, XML, SOAP, HTTP) with service contracts describing functionality. Direct database access, legacy methods, and GUIs contradict SOA encapsulation and standardization principles.
 
 </p>
 </details>
@@ -97,19 +85,16 @@ encapsulation and standardization principles.
 
 What is the role of a "Service Directory" in SOA?
 
-- [ ] It acts as a central broker mediating all service calls.
-- [x] It serves as a repository where service providers publish their metadata, allowing service
-  consumers to discover available services.
-- [ ] It directly implements business logic of services.
-- [ ] It monitors real-time performance of all services.
+- [ ] It acts as a central broker mediating all service calls directly.
+- [x] It's a repository where providers publish metadata for discovery.
+- [ ] It directly implements business logic of services within.
+- [ ] It monitors real-time performance of all services continuously.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Service Directories are repositories for service metadata enabling discovery (like
-yellow pages). They don't broker calls (SOA is direct after discovery), implement logic, or monitor
-performance.
+**Rationale:** Service Directories are repositories for service metadata enabling discovery (like yellow pages). They don't broker calls (SOA is direct after discovery), implement logic, or monitor performance.
 
 </p>
 </details>
@@ -118,23 +103,18 @@ performance.
 
 ## Question 5
 
-How does the interaction between a service consumer and a service provider differ in SOA compared to
-the Broker pattern?
+How does the interaction between a service consumer and a service provider differ in SOA compared to the Broker pattern?
 
-- [ ] In SOA, the service directory always mediates every call.
-- [ ] In the Broker pattern, there is no direct communication.
-- [x] In SOA, the service directory only makes the initial connection, after which there is direct
-  communication between the consumer and provider, unlike the Broker pattern where the broker is
-  always in the middle.
+- [ ] In SOA, the service directory always mediates every call made.
+- [ ] In the Broker pattern, there is no direct communication allowed.
+- [x] SOA directory connects initially; then communication is direct.
 - [ ] The Broker pattern is more modern than SOA for discovery.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** SOA directories only facilitate initial connection; subsequent communication is
-direct. Broker pattern keeps the broker in the middle for all calls—fundamentally different
-interaction models.
+**Rationale:** SOA directories only facilitate initial connection; subsequent communication is direct. Broker pattern keeps the broker in the middle for all calls—fundamentally different interaction models.
 
 </p>
 </details>
@@ -154,8 +134,7 @@ What is the primary purpose of the "service contract" in SOA?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Service contracts precisely describe interface functionality, not internal details.
-Language specification and deployment management are separate concerns from contract definition.
+**Rationale:** Service contracts precisely describe interface functionality, not internal details. Language specification and deployment management are separate concerns from contract definition.
 
 </p>
 </details>
@@ -175,8 +154,7 @@ What is the relationship between SOA and monolithic systems?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** SOA enables flexible reuse of existing monolithic systems, not replacement. SOA isn't
-monolithic, and monolithic systems can integrate with SOA through service wrapping.
+**Rationale:** SOA enables flexible reuse of existing monolithic systems, not replacement. SOA isn't monolithic, and monolithic systems can integrate with SOA through service wrapping.
 
 </p>
 </details>
@@ -196,8 +174,7 @@ What is the role of "encapsulation" in SOA services?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** SOA services encapsulate (hide) internal implementation details from consumers.
-Exposing details, lacking encapsulation, or data-only encapsulation contradict SOA principles.
+**Rationale:** SOA services encapsulate (hide) internal implementation details from consumers. Exposing details, lacking encapsulation, or data-only encapsulation contradict SOA principles.
 
 </p>
 </details>

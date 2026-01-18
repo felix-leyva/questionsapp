@@ -1,21 +1,17 @@
 ## Question 1
 
-What is a key difference in resource utilization between a synchronous and an asynchronous order
-processing system, as illustrated by the bakery and Starbucks models?
+What is a key difference in resource utilization between a synchronous and an asynchronous order processing system, as illustrated by the bakery and Starbucks models?
 
 - [ ] Synchronous systems achieve superior efficiency through sequential processing.
-- [x] Asynchronous systems are more efficient because they allow parallel processing and avoid idle
-  periods, serving multiple customers concurrently.
+- [x] Asynchronous systems enable parallel processing avoiding idle periods.
 - [ ] Synchronous systems demand more re-synchronization coordination efforts.
-- [ ] Asynchronous systems only scale for minimal order volumes.
+- [ ] Asynchronous systems only scale for minimal order volumes typically.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Asynchronous systems (Starbucks model) enable parallel processing eliminating idle
-periods, increasing efficiency. Synchronous systems (bakery model) create idle periods during
-sequential processing, reducing efficiency.
+**Rationale:** Asynchronous systems (Starbucks model) enable parallel processing eliminating idle periods, increasing efficiency. Synchronous systems (bakery model) create idle periods during sequential processing, reducing efficiency.
 
 </p>
 </details>
@@ -24,22 +20,18 @@ sequential processing, reducing efficiency.
 
 ## Question 2
 
-What is a crucial aspect that needs to be managed in an asynchronous messaging system, as
-exemplified by the Starbucks model?
+What is a crucial aspect that needs to be managed in an asynchronous messaging system, as exemplified by the Starbucks model?
 
-- [ ] Ensuring all orders process in exact reception sequence.
-- [ ] Avoiding any form of customer re-synchronization.
-- [x] Reconnecting to the customer and bringing the results and requests back together once
-  everything is ready.
-- [ ] Limiting producers and consumers to prevent chaos.
+- [ ] Ensuring all orders process in exact reception sequence always.
+- [ ] Avoiding any form of customer re-synchronization entirely.
+- [x] Reconnecting results with requests when everything is ready.
+- [ ] Limiting producers and consumers to prevent chaos overall.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Asynchronous systems require re-synchronization—reconnecting results with original
-requests/customers when ready. Strict ordering, avoiding re-sync, and limiting participants
-contradict asynchronous parallel processing benefits.
+**Rationale:** Asynchronous systems require re-synchronization—reconnecting results with original requests/customers when ready. Strict ordering, avoiding re-sync, and limiting participants contradict asynchronous parallel processing benefits.
 
 </p>
 </details>
@@ -48,22 +40,18 @@ contradict asynchronous parallel processing benefits.
 
 ## Question 3
 
-What are two important rules or characteristics of messaging systems that help manage potential
-chaos from asynchronous operations?
+What are two important rules or characteristics of messaging systems that help manage potential chaos from asynchronous operations?
 
-- [ ] Messages must process in send order, and consumers can read messages repeatedly.
-- [x] Queues can be configured to be persistent (data is not lost if the system goes down), and
-  every message can only be read once by a consumer.
-- [ ] All messages require immediate consumer acknowledgment, and producers wait for confirmation.
-- [ ] Messaging systems automatically handle all semantic message differences.
+- [ ] Messages must process in send order, and consumers can read repeatedly.
+- [x] Queues can be persistent, and messages can only be read once.
+- [ ] All messages require immediate acknowledgment, producers wait for it.
+- [ ] Messaging systems automatically handle all semantic differences.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Key characteristics: persistence (no data loss on failure) and single-read per
-message. Strict ordering isn't guaranteed, immediate acknowledgment isn't required, and semantic
-differences need manual handling.
+**Rationale:** Key characteristics: persistence (no data loss on failure) and single-read per message. Strict ordering isn't guaranteed, immediate acknowledgment isn't required, and semantic differences need manual handling.
 
 </p>
 </details>
@@ -83,9 +71,7 @@ When multiple producers and consumers share the same queue, what is a key challe
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Multiple producers/consumers create execution order uncertainty—systems must handle
-unpredictable message processing sequences. Single-writer restrictions, simultaneous delivery, and
-duplicate prevention are managed by the messaging system.
+**Rationale:** Multiple producers/consumers create execution order uncertainty—systems must handle unpredictable message processing sequences. Single-writer restrictions, simultaneous delivery, and duplicate prevention are managed by the messaging system.
 
 </p>
 </details>
@@ -105,9 +91,7 @@ What is the rule regarding message consumption by consumers in a messaging syste
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Messages can only be read once per consumer, preventing duplicate processing.
-Multiple reads, automatic deletion, and first-reader-only processing aren't standard messaging queue
-behaviors.
+**Rationale:** Messages can only be read once per consumer, preventing duplicate processing. Multiple reads, automatic deletion, and first-reader-only processing aren't standard messaging queue behaviors.
 
 </p>
 </details>
@@ -116,22 +100,18 @@ behaviors.
 
 ## Question 7
 
-What is the implication of multiple producers and consumers sharing the same queue regarding message
-execution order?
+What is the implication of multiple producers and consumers sharing the same queue regarding message execution order?
 
-- [ ] Messages always execute in exact transmission order.
-- [x] The order in which messages will be executed by consumers is uncertain, and the system must be
-  able to deal with this.
+- [ ] Messages always execute in exact transmission order always.
+- [x] Message execution order is uncertain; systems must handle this.
 - [ ] Each consumer processes messages in independent arbitrary order.
-- [ ] The message bus guarantees strict execution sequencing.
+- [ ] The message bus guarantees strict execution sequencing always.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Shared queues with multiple participants create uncertain execution order—systems
-must tolerate this unpredictability. Guaranteed ordering, independent consumer ordering, and
-bus-enforced sequencing aren't provided.
+**Rationale:** Shared queues with multiple participants create uncertain execution order—systems must tolerate this unpredictability. Guaranteed ordering, independent consumer ordering, and bus-enforced sequencing aren't provided.
 
 </p>
 </details>

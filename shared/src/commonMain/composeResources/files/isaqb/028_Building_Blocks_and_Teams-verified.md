@@ -3,18 +3,15 @@
 What is Conway's Law, as described in the text?
 
 - [ ] A law mandating layered architecture for all software systems.
-- [x] A statement that the communication structure of an organization will always be visible in the
-  structure of what that organization produces.
-- [ ] A principle determining optimal development team sizes.
-- [ ] A rule prescribing specific programming languages for particular tasks.
+- [x] Organizational communication structure is visible in produced systems.
+- [ ] A principle determining optimal development team sizes overall.
+- [ ] A rule prescribing specific programming languages for tasks.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Conway's Law (1967) states organizational communication structure becomes visible in
-the products created. It doesn't mandate architectures, team sizes, or languages—it describes
-organizational impact on structure.
+**Rationale:** Conway's Law (1967) states organizational communication structure becomes visible in the products created. It doesn't mandate architectures, team sizes, or languages—it describes organizational impact on structure.
 
 </p>
 </details>
@@ -23,12 +20,10 @@ organizational impact on structure.
 
 ## Question 2
 
-If development teams are assigned to build specific layers (e.g., UI team, business logic team),
-what does Conway's Law predict will happen to the building blocks?
+If development teams are assigned to build specific layers (e.g., UI team, business logic team), what does Conway's Law predict will happen to the building blocks?
 
-- [ ] Building blocks achieve complete independence from each other.
-- [x] Building blocks within teams will increase their coupling, while separation across teams will
-  become more coarse-grained and stricter.
+- [ ] Building blocks achieve complete independence from each other fully.
+- [x] Intra-team coupling increases; inter-team separation becomes stricter.
 - [ ] All interlayer interfaces become perfectly clear and well-tested.
 - [ ] The system naturally evolves toward microservices architecture.
 
@@ -36,9 +31,7 @@ what does Conway's Law predict will happen to the building blocks?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Conway's Law predicts increased coupling within teams and stricter, coarser
-separation across teams. Complete independence, perfect interfaces, and automatic microservices
-evolution don't follow from team-based layer assignment.
+**Rationale:** Conway's Law predicts increased coupling within teams and stricter, coarser separation across teams. Complete independence, perfect interfaces, and automatic microservices evolution don't follow from team-based layer assignment.
 
 </p>
 </details>
@@ -47,22 +40,18 @@ evolution don't follow from team-based layer assignment.
 
 ## Question 3
 
-What is the effect of assigning teams to features or specific parts of the domain, according to
-Conway's Law?
+What is the effect of assigning teams to features or specific parts of the domain, according to Conway's Law?
 
-- [ ] Teams become isolated and collaboration becomes impossible.
-- [x] Boundaries within a team will fade, while strong boundaries will be established between teams,
-  potentially leading to splitting building blocks for independent work.
-- [ ] This approach guarantees the system structure perfectly matches initial design.
+- [ ] Teams become isolated and collaboration becomes impossible overall.
+- [x] Intra-team boundaries fade; inter-team boundaries strengthen significantly.
+- [ ] This approach guarantees the system structure perfectly matches design.
 - [ ] It reduces the overall number of building blocks in the system.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Feature/domain team assignment causes intra-team boundaries to fade and inter-team
-boundaries to strengthen, possibly splitting building blocks for independence. It doesn't isolate
-teams, guarantee design fidelity, or reduce building blocks.
+**Rationale:** Feature/domain team assignment causes intra-team boundaries to fade and inter-team boundaries to strengthen, possibly splitting building blocks for independence. It doesn't isolate teams, guarantee design fidelity, or reduce building blocks.
 
 </p>
 </details>
@@ -71,21 +60,18 @@ teams, guarantee design fidelity, or reduce building blocks.
 
 ## Question 4
 
-What is the ultimate implication of Conway's Law for system design, regardless of the initial
-design?
+What is the ultimate implication of Conway's Law for system design, regardless of the initial design?
 
 - [ ] The initial theoretical design always dictates final system structure.
 - [ ] System structure remains entirely independent of team organization.
-- [x] The team structure will always be stronger than any theoretical design of your system.
-- [ ] Software architecture becomes irrelevant with well-defined team structure.
+- [x] Team structure will always be stronger than any theoretical design.
+- [ ] Software architecture becomes irrelevant with well-defined teams.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Conway's Law implies team structure ultimately dominates theoretical design. Initial
-designs don't always prevail, structure isn't independent of teams, and architecture remains
-relevant—but team organization is the stronger force.
+**Rationale:** Conway's Law implies team structure ultimately dominates theoretical design. Initial designs don't always prevail, structure isn't independent of teams, and architecture remains relevant—but team organization is the stronger force.
 
 </p>
 </details>
@@ -97,18 +83,15 @@ relevant—but team organization is the stronger force.
 What is a characteristic of "highly standardized teams" (component teams)?
 
 - [ ] They exhibit high agility delivering valuable features at speed.
-- [x] They can specialize on certain skills and build very clever and efficient solutions, but are
-  dependent on other teams for valuable functionality.
-- [ ] They must master comprehensive technical skills across their domain.
-- [ ] They focus primarily on delivering end-to-end features independently.
+- [x] They specialize on skills but depend on other teams for value.
+- [ ] They must master comprehensive technical skills across domains.
+- [ ] They focus primarily on delivering end-to-end features alone.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Component teams specialize and build efficient solutions but depend on other teams
-for end-user value. High agility, comprehensive skills, and end-to-end feature delivery characterize
-feature teams, not component teams.
+**Rationale:** Component teams specialize and build efficient solutions but depend on other teams for end-user value. High agility, comprehensive skills, and end-to-end feature delivery characterize feature teams, not component teams.
 
 </p>
 </details>
@@ -128,8 +111,7 @@ In what year was Conway's Law formulated?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Conway's Law was formulated in 1967 by Melvin Conway. The years 1985, 2001, and 1992
-correspond to other significant software engineering milestones but not Conway's Law.
+**Rationale:** Conway's Law was formulated in 1967 by Melvin Conway. The years 1985, 2001, and 1992 correspond to other significant software engineering milestones but not Conway's Law.
 
 </p>
 </details>
@@ -141,40 +123,36 @@ correspond to other significant software engineering milestones but not Conway's
 What is the advice derived from Conway's Law for building a system with a certain structure?
 
 - [ ] Team structure should be ignored; only technical design matters.
-- [x] You must organize your teams in a way that reflects that desired structure.
-- [ ] The system structure emerges automatically regardless of organization.
+- [x] Organize teams to reflect the desired system structure directly.
+- [ ] The system structure emerges automatically regardless of teams.
 - [ ] Only very small teams can achieve specific system structures.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** To achieve a desired system structure, organize teams to reflect that structure (
-Conway's Law in reverse). Ignoring teams, automatic emergence, and size constraints all miss this
-strategic organizational principle.
+**Rationale:** To achieve a desired system structure, organize teams to reflect that structure (Conway's Law in reverse). Ignoring teams, automatic emergence, and size constraints all miss this strategic organizational principle.
 
 </p>
 </details>
 
 ---
 
-## Question 8
+## Question 8 (more than 1 might be correct)
 
 What are the characteristics of "feature teams" (as opposed to component teams)?
 
-- [ ] They specialize in specific technical skills building efficient solutions.
+- [ ] They specialize in specific technical skills for solutions.
 - [x] They must master all technical skills for their domain.
 - [x] They can deliver valuable features at high speed.
-- [ ] They excel at building very clever and efficient solutions.
+- [ ] They excel at building very clever and efficient code.
 - [ ] They focus primarily on building reusable components.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Feature teams master all domain technical skills and deliver features rapidly, though
-not always with maximum efficiency. Technical specialization, clever solutions, and component focus
-characterize component teams, not feature teams.
+**Rationale:** Feature teams master all domain technical skills and deliver features rapidly, though not always with maximum efficiency. Technical specialization, clever solutions, and component focus characterize component teams, not feature teams.
 
 </p>
 </details>

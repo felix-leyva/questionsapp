@@ -11,9 +11,7 @@ What is the cornerstone of a product quality evaluation system, according to the
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** ISO 25010 quality model is the cornerstone of product quality evaluation systems.
-Feature count, development speed, and software cost are project metrics, not quality evaluation
-foundations.
+**Rationale:** ISO 25010 quality model is the cornerstone of product quality evaluation systems. Feature count, development speed, and software cost are project metrics, not quality evaluation foundations.
 
 </p>
 </details>
@@ -25,8 +23,7 @@ foundations.
 What does "Functional Suitability" in the ISO 25010 quality model describe?
 
 - [ ] The system's performance.
-- [x] The degree to which the software covers all specific tasks and user objectives, provides
-  correct results, and is appropriate for user needs.
+- [x] Coverage of tasks, correct results, user needs.
 - [ ] The system's ability to be maintained.
 - [ ] The system's security features.
 
@@ -34,9 +31,7 @@ What does "Functional Suitability" in the ISO 25010 quality model describe?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Functional Suitability describes task/objective coverage, result correctness, and
-user need appropriateness. Performance (Performance Efficiency), maintainability (Maintainability),
-and security (Security) are separate ISO 25010 characteristics.
+**Rationale:** Functional Suitability describes task/objective coverage, result correctness, and user need appropriateness. Performance (Performance Efficiency), maintainability (Maintainability), and security (Security) are separate ISO 25010 characteristics.
 
 </p>
 </details>
@@ -48,18 +43,15 @@ and security (Security) are separate ISO 25010 characteristics.
 What aspects does "Performance Efficiency" cover in the ISO 25010 quality model?
 
 - [ ] Only the response time of the system.
-- [x] Time behavior (e.g., response times), resources used by the system, and meeting maximum
-  limits.
-- [ ] The system's ability to be compatible with other systems.
+- [x] Time behavior, resource usage, max limits.
+- [ ] The system's compatibility with others.
 - [ ] The system's ease of use.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Performance Efficiency covers time behavior (response times), resource usage, and
-maximum limit compliance. Compatibility (Compatibility characteristic) and ease of use (Usability
-characteristic) are separate ISO 25010 quality characteristics.
+**Rationale:** Performance Efficiency covers time behavior (response times), resource usage, and maximum limit compliance. Compatibility (Compatibility characteristic) and ease of use (Usability characteristic) are separate ISO 25010 quality characteristics.
 
 </p>
 </details>
@@ -71,8 +63,7 @@ characteristic) are separate ISO 25010 quality characteristics.
 What does "Compatibility" focus on in the ISO 25010 quality model?
 
 - [ ] The system's ability to be maintained.
-- [x] How a system can perform its required functions efficiently while sharing resources and
-  environment with other systems, and interoperability.
+- [x] Sharing resources/environment, interoperability.
 - [ ] The system's security features.
 - [ ] The system's ease of use.
 
@@ -80,9 +71,7 @@ What does "Compatibility" focus on in the ISO 25010 quality model?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Compatibility focuses on efficient function performance while sharing
-resources/environment and interoperability with other systems. Maintainability, security, and
-usability are separate ISO 25010 characteristics.
+**Rationale:** Compatibility focuses on efficient function performance while sharing resources/environment and interoperability with other systems. Maintainability, security, and usability are separate ISO 25010 characteristics.
 
 </p>
 </details>
@@ -93,8 +82,7 @@ usability are separate ISO 25010 characteristics.
 
 Which of the following are sub-characteristics of "Usability" in the ISO 25010 quality model?
 
-- [x] The degree to which the user is able to recognize whether the system is appropriate for his
-  needs.
+- [x] The degree to which the user is able to recognize whether the system is appropriate for his needs.
 - [x] How easy is it to learn and use the system.
 - [x] How easy is it to operate and control.
 - [x] Protection against making errors.
@@ -107,9 +95,7 @@ Which of the following are sub-characteristics of "Usability" in the ISO 25010 q
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Usability sub-characteristics include appropriateness recognizability, learnability,
-operability, error protection, aesthetics, and accessibility. Response time and resource utilization
-are Performance Efficiency sub-characteristics, not Usability.
+**Rationale:** Usability sub-characteristics include appropriateness recognizability, learnability, operability, error protection, aesthetics, and accessibility. Response time and resource utilization are Performance Efficiency sub-characteristics, not Usability.
 
 </p>
 </details>
@@ -120,10 +106,8 @@ are Performance Efficiency sub-characteristics, not Usability.
 
 What does "Reliability" encompass in the ISO 25010 quality model?
 
-- [ ] Only the system's ability to recover from failures.
-- [x] Maturity (functioning under normal operation), availability (when required for use), fault
-  tolerance (operating as intended even with faults), and recoverability (data/state after
-  interruption).
+- [ ] Only the ability to recover from failures.
+- [x] Maturity, availability, fault tolerance, recovery.
 - [ ] The system's security features.
 - [ ] The system's ease of maintenance.
 
@@ -131,9 +115,7 @@ What does "Reliability" encompass in the ISO 25010 quality model?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Reliability encompasses maturity, availability, fault tolerance, and recoverability.
-Recovery-only, security (Security characteristic), and maintenance ease (Maintainability) all miss
-Reliability's comprehensive operational dependability scope.
+**Rationale:** Reliability encompasses maturity, availability, fault tolerance, and recoverability. Recovery-only, security (Security characteristic), and maintenance ease (Maintainability) all miss Reliability's comprehensive operational dependability scope.
 
 </p>
 </details>
@@ -156,9 +138,7 @@ Which of the following are sub-characteristics of "Reliability" in the ISO 25010
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Reliability sub-characteristics are maturity, availability, fault tolerance, and
-recoverability. Response time/resource utilization (Performance Efficiency) and aesthetics (
-Usability) are separate quality characteristic sub-components.
+**Rationale:** Reliability sub-characteristics are maturity, availability, fault tolerance, and recoverability. Response time/resource utilization (Performance Efficiency) and aesthetics (Usability) are separate quality characteristic sub-components.
 
 </p>
 </details>
@@ -181,9 +161,7 @@ What aspects does "Security" cover in the ISO 25010 quality model?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Security covers confidentiality, integrity, non-repudiation, accountability, and
-authenticity. Performance efficiency and usability are separate ISO 25010 quality characteristics,
-not security sub-characteristics.
+**Rationale:** Security covers confidentiality, integrity, non-repudiation, accountability, and authenticity. Performance efficiency and usability are separate ISO 25010 quality characteristics, not security sub-characteristics.
 
 </p>
 </details>
@@ -195,18 +173,15 @@ not security sub-characteristics.
 What does "Maintainability" describe in the ISO 25010 quality model?
 
 - [ ] The system's performance.
-- [x] How easy a system can be extended, changed, and tested, including modularity, reusability,
-  analyzability, modifiability, and testability.
+- [x] Extension, change, testing ease.
 - [ ] The system's security features.
-- [ ] The system's compatibility with other systems.
+- [ ] The system's compatibility with others.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Maintainability describes extension/change/testing ease through modularity,
-reusability, analyzability, modifiability, and testability. Performance, security, and compatibility
-are separate ISO 25010 characteristics.
+**Rationale:** Maintainability describes extension/change/testing ease through modularity, reusability, analyzability, modifiability, and testability. Performance, security, and compatibility are separate ISO 25010 characteristics.
 
 </p>
 </details>
@@ -230,9 +205,7 @@ Which of the following are sub-characteristics of "Maintainability" in the ISO 2
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Maintainability sub-characteristics are modularity, reusability, analyzability,
-modifiability, and testability. Response time (Performance Efficiency), security features (
-Security), and user friendliness (Usability) are separate characteristics.
+**Rationale:** Maintainability sub-characteristics are modularity, reusability, analyzability, modifiability, and testability. Response time (Performance Efficiency), security features (Security), and user friendliness (Usability) are separate characteristics.
 
 </p>
 </details>
@@ -244,8 +217,7 @@ Security), and user friendliness (Usability) are separate characteristics.
 What does "Portability" mean in the ISO 25010 quality model?
 
 - [ ] The system's ability to be maintained.
-- [x] How good a system adapts for different or evolving hardware, software, and environments,
-  including ease of installation and replaceability.
+- [x] Adaptation to different environments.
 - [ ] The system's security features.
 - [ ] The system's ease of use.
 
@@ -253,9 +225,7 @@ What does "Portability" mean in the ISO 25010 quality model?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Portability describes adaptation to different/evolving
-hardware/software/environments, installation ease, and replaceability. Maintainability, security,
-and usability are separate ISO 25010 quality characteristics.
+**Rationale:** Portability describes adaptation to different/evolving hardware/software/environments, installation ease, and replaceability. Maintainability, security, and usability are separate ISO 25010 quality characteristics.
 
 </p>
 </details>
@@ -267,8 +237,7 @@ and usability are separate ISO 25010 quality characteristics.
 Can software quality be measured directly?
 
 - [ ] Yes, it can be measured directly as a single value.
-- [x] No, quality as such cannot be measured, but the degree to which the system fulfills the
-  characteristics can be measured if requirements are quantifiable.
+- [x] No, but characteristic fulfillment degree can be.
 - [ ] Only functional suitability can be measured.
 - [ ] Only non-functional requirements can be measured.
 
@@ -276,9 +245,7 @@ Can software quality be measured directly?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Quality cannot be measured directly, but characteristic fulfillment degree can if
-requirements are quantifiable. Single-value measurement, functional-only, and non-functional-only
-all miss quality's multi-dimensional nature.
+**Rationale:** Quality cannot be measured directly, but characteristic fulfillment degree can if requirements are quantifiable. Single-value measurement, functional-only, and non-functional-only all miss quality's multi-dimensional nature.
 
 </p>
 </details>
@@ -289,19 +256,16 @@ all miss quality's multi-dimensional nature.
 
 What is a key insight regarding the fulfillment of different quality characteristics?
 
-- [ ] Fulfilling one characteristic always improves all others.
-- [x] A high degree of fulfillment of one characteristic can lead to only a lower degree being
-  achieved for another (e.g., performance optimization vs. modularity).
-- [ ] All characteristics can always be maximized simultaneously.
-- [ ] Quality characteristics are independent of each other.
+- [ ] Fulfilling one always improves all others.
+- [x] High fulfillment of one can reduce another.
+- [ ] All characteristics can be maximized together.
+- [ ] Quality characteristics are independent.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** High fulfillment of one characteristic can reduce another (performance optimization
-may compromise modularity—trade-offs exist). Universal improvement, simultaneous maximization, and
-independence all miss quality characteristic trade-off reality.
+**Rationale:** High fulfillment of one characteristic can reduce another (performance optimization may compromise modularity—trade-offs exist). Universal improvement, simultaneous maximization, and independence all miss quality characteristic trade-off reality.
 
 </p>
 </details>

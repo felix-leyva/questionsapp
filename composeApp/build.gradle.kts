@@ -10,6 +10,7 @@ plugins {
     id(libs.plugins.compose.compiler.get().pluginId)
     id(libs.plugins.ksp.get().pluginId)
     id(libs.plugins.kotlinxSerialization.get().pluginId)
+    alias(libs.plugins.hot.reload)
 }
 
 kotlin {

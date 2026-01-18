@@ -11,10 +11,7 @@ What are the four levels of software architecture that structure the chapter des
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** The four levels are Business Architecture, Architecture Style, Technical
-Architecture, and Cross-cutting Concerns. Presentation/Business/Data layers describe layered
-architecture, Strategic/Tactical/Operational are planning levels, and
-Frontend/Backend/Database/Integration are deployment tiers—all different categorizations.
+**Rationale:** The four levels are Business Architecture, Architecture Style, Technical Architecture, and Cross-cutting Concerns. Presentation/Business/Data layers describe layered architecture, Strategic/Tactical/Operational are planning levels, and Frontend/Backend/Database/Integration are deployment tiers—all different categorizations.
 
 </p>
 </details>
@@ -23,8 +20,7 @@ Frontend/Backend/Database/Integration are deployment tiers—all different categ
 
 ## Question 2
 
-Which level of architecture is described as the "core" and is derived from business requirements to
-create domain models?
+Which level of architecture is described as the "core" and is derived from business requirements to create domain models?
 
 - [ ] The Technical Architecture defining deployment topology
 - [ ] The Architecture Style establishing structural patterns
@@ -35,9 +31,7 @@ create domain models?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Business Architecture forms the core, derived from business requirements to create
-domain models with domain classes. Technical Architecture handles deployment, Architecture Style
-defines patterns, and Cross-cutting Concerns address system-wide aspects like logging.
+**Rationale:** Business Architecture forms the core, derived from business requirements to create domain models with domain classes. Technical Architecture handles deployment, Architecture Style defines patterns, and Cross-cutting Concerns address system-wide aspects like logging.
 
 </p>
 </details>
@@ -46,8 +40,7 @@ defines patterns, and Cross-cutting Concerns address system-wide aspects like lo
 
 ## Question 3
 
-From what are the two more technical architecture levels (Technical Architecture and Cross-cutting
-Concerns) primarily derived?
+From what are the two more technical architecture levels (Technical Architecture and Cross-cutting Concerns) primarily derived?
 
 - [ ] The business domain model and domain classes.
 - [ ] The stakeholder requirements and user stories.
@@ -58,9 +51,7 @@ Concerns) primarily derived?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Technical Architecture and Cross-cutting Concerns derive from non-functional
-requirements (performance, security, scalability). Domain models, stakeholder requirements, and UX
-specifications drive functional architecture levels, not technical ones.
+**Rationale:** Technical Architecture and Cross-cutting Concerns derive from non-functional requirements (performance, security, scalability). Domain models, stakeholder requirements, and UX specifications drive functional architecture levels, not technical ones.
 
 </p>
 </details>
@@ -80,9 +71,7 @@ What does the "Technical Architecture" level define?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Technical Architecture defines network topology and deployment unit division. Domain
-models belong to Business Architecture, structural patterns to Architecture Style, and
-persistence/communication to Cross-cutting Concerns.
+**Rationale:** Technical Architecture defines network topology and deployment unit division. Domain models belong to Business Architecture, structural patterns to Architecture Style, and persistence/communication to Cross-cutting Concerns.
 
 </p>
 </details>
@@ -91,8 +80,7 @@ persistence/communication to Cross-cutting Concerns.
 
 ## Question 5
 
-Although the overall process is iterative, what is suggested as a sensible starting point within an
-iteration?
+Although the overall process is iterative, what is suggested as a sensible starting point within an iteration?
 
 - [ ] Identifying cross-cutting concerns like logging and security.
 - [ ] Designing the deployment topology and infrastructure.
@@ -103,9 +91,7 @@ iteration?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Start with business architecture even in iterative processes, as it forms the
-foundation. Cross-cutting concerns, deployment design, and architectural style selection typically
-follow after establishing the business core.
+**Rationale:** Start with business architecture even in iterative processes, as it forms the foundation. Cross-cutting concerns, deployment design, and architectural style selection typically follow after establishing the business core.
 
 </p>
 </details>
@@ -125,9 +111,7 @@ What is the primary goal when designing the business architecture?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Business architecture aims to design domain models consisting of domain classes from
-business requirements. Network infrastructure, programming languages, and integration patterns are
-technical concerns addressed at different levels.
+**Rationale:** Business architecture aims to design domain models consisting of domain classes from business requirements. Network infrastructure, programming languages, and integration patterns are technical concerns addressed at different levels.
 
 </p>
 </details>
@@ -138,19 +122,16 @@ technical concerns addressed at different levels.
 
 What is the role of the "Architecture Style" level in software architecture?
 
-- [ ] It specifies the database technology and persistence framework.
-- [x] It determines how the business architecture is organized with other building blocks and serves
-  as the central architecture metaphor of the system.
-- [ ] It defines the detailed implementation approach for individual components.
+- [ ] It specifies the database technology and persistence framework used.
+- [x] It determines how business architecture is organized as central metaphor.
+- [ ] It defines the detailed implementation approach for each component.
 - [ ] It addresses user interface design patterns and interaction models.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Architecture Style determines how business architecture is organized with other
-building blocks, serving as the central metaphor (layered, microservices, etc.). Database
-technology, implementation details, and UI patterns are separate concerns.
+**Rationale:** Architecture Style determines how business architecture is organized with other building blocks, serving as the central metaphor (layered, microservices, etc.). Database technology, implementation details, and UI patterns are separate concerns.
 
 </p>
 </details>
@@ -159,8 +140,7 @@ technology, implementation details, and UI patterns are separate concerns.
 
 ## Question 8
 
-Which two levels of software architecture are described as being more "business-driven" and based on
-functional requirements?
+Which two levels of software architecture are described as being more "business-driven" and based on functional requirements?
 
 - [ ] Technical Architecture and Cross-cutting Concerns addressing runtime qualities.
 - [x] Business Architecture and Architecture Style.
@@ -171,9 +151,7 @@ functional requirements?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Business Architecture and Architecture Style are functional/business-driven levels
-derived from functional requirements. Technical Architecture and Cross-cutting Concerns derive from
-non-functional requirements.
+**Rationale:** Business Architecture and Architecture Style are functional/business-driven levels derived from functional requirements. Technical Architecture and Cross-cutting Concerns derive from non-functional requirements.
 
 </p>
 </details>
@@ -182,8 +160,7 @@ non-functional requirements.
 
 ## Question 9
 
-What is the relationship between the different levels of software architecture in the iterative
-process?
+What is the relationship between the different levels of software architecture in the iterative process?
 
 - [ ] They are independent layers with strict boundaries and no interdependencies.
 - [ ] Only Business Architecture cascades down to influence lower levels.
@@ -194,9 +171,7 @@ process?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** All levels influence each other iteratively—there's bidirectional feedback, not
-unidirectional cascading. They're interdependent, not independent, and no strict sequencing is
-required despite having a sensible starting point.
+**Rationale:** All levels influence each other iteratively—there's bidirectional feedback, not unidirectional cascading. They're interdependent, not independent, and no strict sequencing is required despite having a sensible starting point.
 
 </p>
 </details>

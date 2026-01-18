@@ -1,11 +1,9 @@
 ## Question 1
 
-What is the primary advantage of using a "Shared Database" for application integration compared to
-file transfer, especially for frequent updates?
+What is the primary advantage of using a "Shared Database" for application integration compared to file transfer, especially for frequent updates?
 
 - [ ] It completely eliminates all data format negotiation requirements.
-- [x] It provides immediate data consistency, as changes are visible to all applications the moment
-  they are committed.
+- [x] It provides immediate data consistency, as changes are visible to all applications the moment they are committed.
 - [ ] It demands significantly less technical expertise to implement.
 - [ ] It enables completely independent parallel application development.
 
@@ -13,16 +11,14 @@ file transfer, especially for frequent updates?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Shared Databases provide immediate data consistency—committed changes are instantly
-visible to all applications. Format agreements are still needed, technical skills remain required,
-and development coordination increases.
+**Rationale:** Shared Databases provide immediate data consistency—committed changes are instantly visible to all applications. Format agreements are still needed, technical skills remain required, and development coordination increases.
 
 </p>
 </details>
 
 ---
 
-## Question 2
+## Question 2 (more than 1 might be correct)
 
 Which of the following are advantages of using a Shared Database for integration?
 
@@ -30,15 +26,13 @@ Which of the following are advantages of using a Shared Database for integration
 - [ ] Reduced dependency on SQL drivers or ORM tools.
 - [x] Ubiquitous access due to common SQL drivers and OR mappers.
 - [x] Can encourage data cleanup and better modeling within the shared schema.
-- [ ] Eliminates all semantic interpretation disagreements.
+- [ ] Eliminates all semantic interpretation disagreements between applications.
 
 <details>
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Shared Database advantages: immediate consistency, ubiquitous SQL/ORM access, and
-encouraged data cleanup. It increases (not reduces) reliance on SQL tools and doesn't eliminate
-semantic dissonance.
+**Rationale:** Shared Database advantages: immediate consistency, ubiquitous SQL/ORM access, and encouraged data cleanup. It increases (not reduces) reliance on SQL tools and doesn't eliminate semantic dissonance.
 
 </p>
 </details>
@@ -50,8 +44,7 @@ semantic dissonance.
 What is a significant disadvantage of the Shared Database approach concerning encapsulation?
 
 - [ ] It complicates cross-language database access significantly.
-- [x] It breaks encapsulation because other applications see more of the internal data and schema
-  than they actually need.
+- [x] It breaks encapsulation because other applications see more of the internal data and schema than they actually need.
 - [ ] It mandates each application maintain separate isolated databases.
 - [ ] It inevitably creates disorganized database schema designs.
 
@@ -59,9 +52,7 @@ What is a significant disadvantage of the Shared Database approach concerning en
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Shared Databases break encapsulation by exposing unnecessary internal data and schema
-details to consuming applications. Cross-language access is actually easier, not harder, and schemas
-can be organized.
+**Rationale:** Shared Databases break encapsulation by exposing unnecessary internal data and schema details to consuming applications. Cross-language access is actually easier, not harder, and schemas can be organized.
 
 </p>
 </details>
@@ -73,8 +64,7 @@ can be organized.
 What is the primary issue related to "coupling" when using a Shared Database for integration?
 
 - [ ] It creates loose coupling facilitating easier independent changes.
-- [x] It results in strong coupling, as changes to the shared schema in one application require
-  changes everywhere else.
+- [x] It results in strong coupling, as changes to the shared schema in one application require changes everywhere else.
 - [ ] It exclusively affects database-level coupling, not applications.
 - [ ] It enables completely independent schema evolution per application.
 
@@ -82,9 +72,7 @@ What is the primary issue related to "coupling" when using a Shared Database for
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Shared Databases create strong coupling—schema changes propagate to all consuming
-applications requiring coordinated updates. Coupling is tight, not loose, and affects applications
-directly.
+**Rationale:** Shared Databases create strong coupling—schema changes propagate to all consuming applications requiring coordinated updates. Coupling is tight, not loose, and affects applications directly.
 
 </p>
 </details>
@@ -104,9 +92,7 @@ In what scenario would a Shared Database integration NOT be feasible?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Shared Database integration requires database access—impossible with inaccessible
-external systems. Team distribution, server location, and consistency needs don't preclude shared
-database approaches.
+**Rationale:** Shared Database integration requires database access—impossible with inaccessible external systems. Team distribution, server location, and consistency needs don't preclude shared database approaches.
 
 </p>
 </details>
@@ -126,9 +112,7 @@ What is a potential advantage of a Shared Database approach regarding data quali
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Shared schemas can drive data cleanup and improved modeling through visibility and
-shared responsibility. Models can't diverge, validation remains necessary, and duplication
-contradicts sharing.
+**Rationale:** Shared schemas can drive data cleanup and improved modeling through visibility and shared responsibility. Models can't diverge, validation remains necessary, and duplication contradicts sharing.
 
 </p>
 </details>
@@ -140,8 +124,7 @@ contradicts sharing.
 What is "semantic dissonance" in the context of Shared Database integration?
 
 - [ ] When database query response times exceed acceptable thresholds.
-- [x] When different applications interpret the same data in the shared database differently,
-  leading to misunderstandings.
+- [x] When different applications interpret the same data in the shared database differently, leading to misunderstandings.
 - [ ] When the database schema complexity exceeds maintainability limits.
 - [ ] When database accessibility constraints prevent universal application access.
 
@@ -149,9 +132,7 @@ What is "semantic dissonance" in the context of Shared Database integration?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Semantic dissonance occurs when applications interpret shared data differently
-despite identical schemas. Performance, complexity, and accessibility are separate concerns, not
-semantic interpretation issues.
+**Rationale:** Semantic dissonance occurs when applications interpret shared data differently despite identical schemas. Performance, complexity, and accessibility are separate concerns, not semantic interpretation issues.
 
 </p>
 </details>
@@ -160,12 +141,10 @@ semantic interpretation issues.
 
 ## Question 8
 
-What is a key challenge when using a Shared Database for integration, particularly when dealing with
-legacy systems?
+What is a key challenge when using a Shared Database for integration, particularly when dealing with legacy systems?
 
 - [ ] Legacy systems invariably maintain perfectly clean consistent data.
-- [x] Legacy systems often have dirty data, and cleaning it up for a shared database can be a
-  significant effort.
+- [x] Legacy systems often have dirty data, and cleaning it up for a shared database can be a significant effort.
 - [ ] Legacy systems seamlessly integrate with modern database platforms.
 - [ ] Legacy systems universally operate without any database dependencies.
 
@@ -173,8 +152,7 @@ legacy systems?
 <summary>Rationale</summary>
 <p>
 
-**Rationale:** Legacy systems often contain dirty data requiring substantial cleanup for shared
-database integration. They don't have perfect data, easy integration, or database independence.
+**Rationale:** Legacy systems often contain dirty data requiring substantial cleanup for shared database integration. They don't have perfect data, easy integration, or database independence.
 
 </p>
 </details>
