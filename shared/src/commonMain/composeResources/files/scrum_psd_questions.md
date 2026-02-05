@@ -18,7 +18,7 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### Your Scrum Team is one of seven teams working on a Software Product. All teams use the same Version Control System. Which is the best approach to deliver a high-quality Increment?
+### Your Scrum Team is one of seven teams working on a software product. All teams use the same version control system. Which is the best approach to deliver a high-quality Increment? (choose the best answer)
 
 - [ ] Developers should perform a combination of local and private builds.
 - [ ] Each team's automated build is integrated toward the end of the Sprint.
@@ -27,21 +27,21 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### Who creates documentation included with an Increment?
+### Who creates documentation included with an Increment? (choose the best answer)
 
 - [x] The Developers.
 - [ ] Increments do not need documentation.
 - [ ] The Product Owner.
-- [ ] Technical Writers.
+- [ ] Technical writers.
 - [ ] The Scrum Master.
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### What is a merge in a Version Control System?
+### What is a merge in a Version Control System? (choose the best answer)
 
 - [ ] Copying a portion of a code base to isolate it from the original codebase.
 - [ ] Identifying a particular codebase as ready for distribution.
-- [ ] Triggering a Deployment into Production.
+- [ ] Triggering a deployment into production.
 - [x] Combining two or more versions of code into a single codebase.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -56,7 +56,7 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### Which four types of tests can be included in an automated test harness?
+### Which four types of tests can be included in an automated test harness? (choose the best four answers)
 
 - [x] Performance.
 - [ ] Exploratory.
@@ -77,7 +77,7 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### Choose four desirable characteristics of a Unit Test.
+### Choose four desirable characteristics of a Unit Test. (choose the best four answers)
 
 - [ ] Includes exercising the persistence layer.
 - [x] Makes assertions about only one logical concept.
@@ -87,12 +87,12 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### Why does a test written using TDD (Test Driven Development) initially fail?
+### Why does a test written using Test-Driven Development initially fail? (choose the best answer)
 
 - [ ] Because the test has not been refactored.
 - [ ] Because it has to be put into an automated test harness to be run.
-- [ ] Because the tests are checked in before the Product code exists.
-- [x] Because the Product code to satisfy the test does not yet exist.
+- [ ] Because the tests are checked in before the product code exists.
+- [x] Because the product code to satisfy the test does not yet exist.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -111,12 +111,12 @@
 - [ ] It makes Integration Tests obsolete and by doing so saves a lot of time.
 - [x] It helps break down complex problems into smaller ones that are much easier to be tackled.
 - [ ] It increases collaboration between Developers as it requires Pair Programming.
-- [x] It might lead to better code as Refactoring is part of the TDD cycle.
+- [x] It might lead to better code as refactoring is part of the TDD cycle.
 - [x] It helps to identify gaps in understanding the desired behavior.
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### Who decides the System Architecture of a Product developed using Scrum?
+### Who decides the system architecture of a product developed using Scrum? (choose the best answer)
 
 - [ ] The Architect chosen by the Scrum Team.
 - [ ] The Software Architect assigned to the Scrum Team.
@@ -125,7 +125,7 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### When using Continuous Integration, how often should the build be executed?
+### When using Continuous Integration, how often should the build be executed? (choose the best answer)
 
 - [ ] Once per hour.
 - [x] Whenever new or changed code is checked into version control.
@@ -154,7 +154,7 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### Who creates tests on a Scrum Team?
+### Who creates tests on a Scrum Team? (choose the best answer)
 
 - [ ] The Product Owner.
 - [x] The Developers.
@@ -163,7 +163,7 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### What is Test First Development (TFD)?
+### What is Test-First Development (TFD)? (choose the best answer)
 
 - [x] Creating tests before satisfying them.
 - [ ] Testing existing code before adding more code to it.
@@ -202,13 +202,13 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### What are two differences between Unit Tests and Integration Tests?
+### What are two differences between Unit Tests and Integration Tests? (choose the best two answers)
 
-- [x] A Unit Test isolates a specific system behavior.
-- [x] An Integration Test usually focuses on the integration of two or more units.
-- [ ] A Unit Test is automated.
-- [ ] An Integration Test runs overnight.
-- [ ] A Unit Test only runs on a Developer's workstation.
+- [x] A unit test isolates a specific system behavior.
+- [x] An integration test usually focuses on the integration of two or more units.
+- [ ] A unit test is automated.
+- [ ] An integration test runs overnight.
+- [ ] A unit test only runs on a Developer's workstation.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -238,21 +238,21 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### What are three of the best ways to address non-functional requirements?
+### What are three of the best ways to address non-functional requirements? (choose the best three answers)
 
 - [ ] Scrum is for functional, front-end development only.
 - [x] Important, recurring non-functional requirements can be added to the Definition of Done.
 - [ ] Discuss them during a risk mitigation phase before development.
 - [x] Include them in the Product Backlog.
-- [x] Specific expectations can be used as Acceptance Criteria to specific Product Backlog Items.
+- [x] Specific expectations can be used as acceptance criteria to specific Product Backlog items.
 - [ ] Before the release, they should be tested and validated in a hardening Sprint.
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### What is the primary purpose of Refactoring?
+### What is the primary purpose of refactoring? (choose the best answer)
 
 - [ ] Ensuring that all factors are constantly aligned.
-- [ ] Removing all bugs that were found during Regression Tests.
+- [ ] Removing all bugs that were found during regression tests.
 - [x] Making sure that the code is readable and maintainable.
 - [ ] Creating better technical documentation.
 
@@ -269,16 +269,16 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### The practice of decomposing a requirement into failing tests is called:
+### The practice of decomposing a requirement into failing tests is called: (choose the best answer)
 
 - [ ] Regression Testing.
 - [ ] Object oriented requirements definition.
-- [x] Acceptance Test Driven Development.
-- [ ] Behavior Driven Development.
+- [x] Acceptance Test-Driven Development.
+- [ ] Behavior-Driven Development.
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### What is a mock object?
+### What is a mock object? (choose the best answer)
 
 - [x] A test object that mimics the behavior of a dependency in the system under test.
 - [ ] A mock helps you create a build script.
@@ -287,7 +287,7 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### Which four are benefits of Test Driven Development?
+### Which four are benefits of Test-Driven Development? (choose the best four answers)
 
 - [x] It improves quality and reduces bugs.
 - [x] It reduces the cost of maintenance over time.
@@ -297,7 +297,7 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### Which are three attributes of a bad bug report?
+### Which are three attributes of a bad bug report? (choose the best three answers)
 
 - [x] Vague statements or untested assumptions.
 - [x] Generic titles.
@@ -307,7 +307,7 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### When using Scrum, can a Scrum Team use Continuous Delivery?
+### When using Scrum, can a Scrum Team use Continuous Delivery? (choose the best answer)
 
 - [x] Yes, there is nothing in Scrum that conflicts with Continuous Delivery.
 - [ ] No, because the Product Owner may not be available each time a PBI is done and the Product Owner has to decide if it should be released.
@@ -361,7 +361,7 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### Which answer best describes Behavior Driven Development (BDD)?
+### Which answer best describes Behavior-Driven Development (BDD)? (choose the best answer)
 
 - [x] A style of Test Driven Development focusing on user and system interactions.
 - [ ] A development style that accounts for leadership style among team members.
@@ -370,9 +370,9 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### In what ways do Developers contribute to refining the Product Backlog?
+### In what ways do Developers contribute to refining the Product Backlog? (choose the best three answers)
 
-- [x] They ask questions in order to clarify the intent of Product Backlog Items.
+- [x] They ask questions in order to clarify the intent of Product Backlog items.
 - [ ] They do not. The Developers are only responsible for prioritizing technical work.
 - [ ] They do not. The Scrum Master and the Product Owner are responsible for Product Backlog Refinement.
 - [x] They give input on technical dependencies.
@@ -380,13 +380,13 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### When should the Developers create their first automated build?
+### When should the Developers create their first automated build? (choose the best answer)
 
-- [ ] Just before the Product is released.
+- [ ] Just before the product is released.
 - [ ] Before writing the first line of code.
 - [ ] When the Product Owner asks for a build.
 - [ ] Just before the end of the Sprint.
-- [x] As soon as there is code in the Version Control System.
+- [x] As soon as there is code in the version control system.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -410,32 +410,32 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### Why might Developers choose to do Pair Programming?
+### Why might Developers choose to do pair programming? (choose the best answer)
 
 - [ ] Information sharing and learning.
-- [ ] Improving Code Quality.
+- [ ] Improving code quality.
 - [ ] Efficiency.
 - [ ] It can be a fun way to work.
 - [x] All of the above.
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### What is the role of Modeling in Scrum Teams?
+### What is the role of Modeling in Scrum Teams? (choose the best answer)
 
 - [ ] Models are not used by agile teams.
-- [ ] Models are maintained along with the Software as it emerges.
+- [ ] Models are maintained along with the software as it emerges.
 - [ ] Models are assembly instructions for the Developers.
 - [x] Modeling may be useful to increase shared understanding.
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### Which of the following are DevOps Practices?
+### Which of the following are DevOps Practices? (choose the best answer)
 
 - [ ] Continuous Integration / Continuous Deployment / Continuous Delivery.
-- [ ] Blue-Green Deployment.
+- [ ] Blue-Green-Deployment.
 - [ ] Hypothesis Driven Development.
 - [ ] Vertical Teams.
-- [ ] Blameless Postmortem.
+- [ ] Blameless Post-Mortems.
 - [x] All of the above.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -458,7 +458,7 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### Developers are blocked by an impediment in the middle of the Sprint. The impediment is outside the Developer's control. What should they do?
+### Developers are blocked by an impediment in the middle of the Sprint. The impediment is outside the Developer's control. What should they do? (choose the best answer)
 
 - [ ] Stop using Scrum until the impediment is resolved.
 - [ ] Complete the work that can be done and complete the remainder during the hardening Sprint.
@@ -468,7 +468,7 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### What is an Integration Test?
+### What is an integration test? (choose the best answer)
 
 - [ ] A test of the user interface.
 - [ ] A test runs during a Continuous Integration build.
@@ -527,12 +527,12 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### The Daily Scrum event happens every day. What would be three concerns if the frequency were to be lowered to every two to three days?
+### The Daily Scrum event happens every day. What would be three concerns if the frequency were to be lowered to every two to three days? (choose the best three answers)
 
 - [x] Opportunities to inspect and adapt in the Sprint Backlog are lost.
 - [ ] The Scrum Master loses the ability to update the Gantt Chart properly.
 - [ ] Too much work is spent updating the Scrum Board before meeting.
-- [x] Sprint Plan may become inaccurate.
+- [x] The Sprint Backlog may become inaccurate.
 - [x] Impediments are raised and resolved more slowly.
 - [ ] The Product Owner cannot accurately report to the Stakeholders.
 
@@ -568,13 +568,13 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### Which of the following best describes Emergent Architecture?
+### Which of the following best describes Emergent Architecture? (choose the best answer)
 
-- [ ] Starting development of a Software Product requires a clear understanding of the underlying Software Architecture and Emergent Architecture describes the process of creating this initial architecture.
-- [ ] The Software Architecture emerges solely decisions the Developers make from a technical perspective.
-- [ ] In Scrum there is no Architecture-Role therefore architecture emerges naturally.
-- [x] The desire to make decisions easier to change in the future and find the best possible point in time to make decisions.
-- [ ] Enterprise Architects must be involved to create the foundation of each Software Product.
+- [ ] Starting development of a Software Product requires a clear understanding of the underlying software architecture and Emergent Architecture describes the process of creating this final architecture.
+- [ ] The software architecture emerges solely from decisions the Developers make from a technical perspective.
+- [ ] In Scrum there is no Architect-Role therefore architecture emerges naturally.
+- [x] An approach to make decisions easier to change in the future and find the best possible point in time to make decisions.
+- [ ] Enterprise Architects must be involved to create the foundation of each software product.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -606,12 +606,12 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### When is Performance Testing most effectively performed?
+### When is performance testing most effectively performed? (choose the best answer)
 
-- [x] Often, throughout development of the Software.
-- [ ] Just before deploying to Production.
+- [x] Often, throughout development of the software.
+- [ ] Just before deploying to production.
 - [ ] After coding is complete.
-- [ ] In Production.
+- [ ] In production.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -635,11 +635,11 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### Which is LEAST useful when measuring Code Maintainability?
+### Which metric is LEAST useful when measuring Code Maintainability? (choose the best answer)
 
-- [x] Function Points.
-- [ ] Cyclomatic Complexity.
-- [ ] Depth of Inheritance.
+- [x] Function points.
+- [ ] Cyclomatic complexity.
+- [ ] Depth of inheritance.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -662,7 +662,7 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### What are some disadvantages of Code Coverages as a measurement for how well a system or Product is tested? (choose best three answers)
+### What are some disadvantages of Code Coverages as a measurement for how well a system or product is tested? (choose best three answers)
 
 - [ ] It only provides insights for programmers.
 - [x] It does not ensure that the most important or highest risk areas of the code are being exercised by the tests.
@@ -987,12 +987,12 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### Which of the following describe Test Driven Development? (choose two answers)
+### Which of the following describe Test-Driven Development? (choose the best two answers)
 
 - [x] A Software Development technique based on automated tests.
 - [ ] A predictable way to develop working, well-organized code.
-- [ ] Having Testers in the development process.
-- [x] An Increment and emergent approach to Software Design.
+- [ ] Having Testers involved in the development process.
+- [x] An incremental and emergent approach to software design.
 - [ ] Creating a manual test script before writing code.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -2260,7 +2260,7 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### What are reasons to automate the Software build process? (choose the best two answers)
+### What are two reasons to automate the software build process? (choose the best two answers)
 
 - [x] Automation improves the quality of Software by making builds less error-prone.
 - [ ] Code Reviews are much faster if you automate your build.
@@ -2298,7 +2298,7 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### What does a test written with Test Driven Development represent?
+### What does a test written with Test Driven Development represent? (choose the best answer)
 
 - [ ] A bug that will be uncovered.
 - [x] A technical requirement that must be satisfied.
@@ -2307,7 +2307,7 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### What does Code Coverage show?
+### What does Code Coverage show? (choose the best answer)
 
 - [x] Code being exercised by tests.
 - [ ] The absence of defects in code.
@@ -2326,7 +2326,7 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### What is Code Coverage?
+### What is Code Coverage? (choose the best answer)
 
 - [ ] An insurance policy that covers the code for defects.
 - [x] The degree to which the system under test has been exercised by tests.
@@ -2344,7 +2344,7 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### What is Pair Programming?
+### What is Pair Programming? (choose the best answer)
 
 - [ ] A Developer and a Tester work together to write and test code.
 - [ ] Managers doing performance reviews by comparing one programmer's code to another's.
@@ -2354,7 +2354,7 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### What is Technical Debt?
+### What is Technical Debt? (choose the best answer)
 
 - [x] A term representing the eventual consequences of poor technical choices.
 - [ ] Code that has not been commented or documented.
@@ -2372,7 +2372,7 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### What relationship does Scrum have to technical practices?
+### What relationship does Scrum have to technical practices? (choose the best answer)
 
 - [ ] All technical practices must be used to support Scrum.
 - [x] Scrum Development Teams with excellent technical practices will likely be more successful.
@@ -2570,7 +2570,7 @@
 
 - [ ] Do all of the development work, except for specialized testing that requires additional tools and environments.
 - [ ] Complete the project within the date and cost as calculated by the Product Owner.
-- [x] Turn Product Backlog item into a valuable, useful Increment.
+- [x] Turn Product Backlog items into a valuable, useful Increment.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2592,7 +2592,7 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### The right time to refactor code using Test Driven Development is: (choose the best answer)
+### The right time to refactor code using Test-Driven Development is: (choose the best answer)
 
 - [ ] When I can see the "debt" building in the code.
 - [ ] When preparing legacy code for unit tests.
@@ -2787,5 +2787,287 @@
 
 - [ ] True.
 - [x] False.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### True or False: A Scrum Master fulfills the same role as a traditional Project Manager.
+
+- [ ] True.
+- [x] False.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### When does a Sprint conclude? (choose the best answer)
+
+- [x] When the Sprint Retrospective is complete.
+- [ ] When the Product Owner decides enough has been delivered to meet the Sprint Goal.
+- [ ] When all the tasks are completed by the Developers.
+- [ ] When all Product Backlog items meet their Definition of Done.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### What three things can happen when refining Product Backlog items? (choose the best three answers)
+
+- [ ] Feature Testing.
+- [x] Sizing.
+- [x] Analysis.
+- [ ] Programming.
+- [x] Product Backlog item decomposition.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### What is static analysis? (choose the best answer)
+
+- [ ] Analysis performed on software at runtime.
+- [x] Analysis performed on code.
+- [ ] A tool that inspects the correctness of static classes.
+- [ ] Work performed by a business analyst.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### How is architecture decided by a Scrum Team? (choose the best answer)
+
+- [ ] An architect on the Scrum Team undertakes all architecture tasks.
+- [ ] The architecture cares for itself as code is written and deployed.
+- [ ] Upfront designs are presented to the Scrum Team prior to the first Sprint.+
+- [x] It emerges as the Developers create the system.
+- [ ] The architect works in the early part of each Sprint to define the architecture for that sprint.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### A Scrum Team is experiencing a growing list of impediments. Which techniques would be most helpful in this situation? (choose the best two answers)
+
+- [x] The Scrum Master discusses the impediments with the Scrum Team.
+- [x] As a Scrum Team, prioritize the list and work on them in order.
+- [ ] Arrange a triage meeting with management.
+- [ ] The Product Owner should add the open impediments to the Product Backlog.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### What should the Scrum Team do during the first Sprint? (choose the best answer)
+
+- [ ] Make up a plan for the rest of the project.
+- [x] Create at least one valuable and useful increment.
+- [ ] Define the major product features and a release plan architecture.
+- [ ] Analyze, describe, and document the requirements for the subsequent Sprints.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### Who starts the Daily Scrum? (choose the best answer)
+
+- [ ] The Scrum Master. This ensures that the Developers have the event, and it stays within the timebox.
+- [x] Whoever the Developers decide should start.
+- [ ] The Product Owner.
+- [ ] The customers who attend each day
+- [ ] The person coming in last. This encourages people to be on time and helps to stay within the timebox.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### While developing a new feature, you find a bug delivered in a previous increment. What should you do? (choose the best answer)
+
+- [ ] Stub out the code that caused the bug so it no longer occurs.
+- [x] Talk to the Product Owner about what steps to take.
+- [ ] Revise the tests so that the bug no longer appears on the bug report.
+- [ ] Set aside the Sprint Goal until the bug is fixed.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### True or False: Multiple Scrum Teams working on the same product or system all select work from the same Product Backlog.
+
+- [x] True.
+- [ ] False.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### Which is a benefit of refactoring code? (choose the best answer)
+
+- [ ] To keep the code moving.
+- [ ] Improves the external contract representing the system under test
+- [ ] To have all code in a single file for easy printing and code reviews.
+- [x] To improve readability and maintainability.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### How often should an automated build be executed? (choose the best answer)
+
+- [ ] As often as possible, and certainly prior to the end of the Sprint.
+- [ ] Whenever a Developer suspects there is a bug in the system.
+- [x] Whenever new or changed code is checked into version control.
+- [ ] Once per day.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### Which three of the following are code quality metrics? (choose the best three answers)
+
+- [ ] Unit tests per class.
+- [ ] Cycle time per Product Backlog item.
+- [x] Cyclomatic complexity.
+- [ ] Number of check-ins per day.
+- [x] Depth of inheritance.
+- [x] Class coupling.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### When are individuals with testing and quality expertise included in the software development effort? (choose the best answer)
+
+- [ ] When the implementation of each feature is complete.
+- [x] From the beginning and throughout all Sprints.
+- [ ] When the product is feature complete.
+- [ ] After Sprint Review.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### What would a Developer with special quality assurance skills NOT do? (choose the best answer)
+
+- [ ] Create a plan for testing the application.
+- [x] Delay test activities until a feature has been coded.
+- [ ] Define acceptance criteria for features.
+- [ ] Identify tools and techniques to be used in testing the product.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### True or False: The Product Owner is responsible for Product Backlog Refinement.
+
+- [ ] True.
+- [x] False.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### What are two ways Developers can ensure a good application architecture? (choose the best two answers)
+
+- [ ] The Developers focus only on adding functionality. The architecture will take care of itself as the Developers add functionality.
+- [x] Architecture is an ongoing discussion by Developers, focusing on implementing current Sprint Backlog items.
+- [ ] The Developers at Sprint 0 create infrastructure that will be needed later.
+- [x] The Developers have a set of guiding architecture principles that are understood and followed when writing code.
+- [ ] The Scrum Team assigns someone to the role of software architect to provide architectural oversight.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### What are two reasons to use mock objects in unit tests? (choose the best two answers)
+
+- [ ] TDD is impossible without them.
+- [ ] To decrease cyclomatic complexity.
+- [x] Isolating a particular system component for controlled testing.
+- [x] The behavior of a given object can be emulated to the system under test.
+- [ ] They are machine-generated and eliminate the need to write code by hand.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### Which topics should be discussed in the Sprint Review? (choose the best answer)
+
+- [ ] The Scrum process, and how it was used during the Sprint.
+- [ ] Coding and engineering practices.
+- [x] The product increment.
+- [ ] All of the above
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### When should Developers as the Product Owner for feedback on their work? (choose the best answer)
+
+- [x] Whenever the feedback can help avoid waste.
+- [ ] During the Sprint Review.
+- [ ] During Product Backlog Refinement.
+- [ ] During the Daily Scrum.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### What happens if the Scrum Team cannot complete its work by the end of the Sprint? (choose the best answer)
+
+- [x] The Sprint length is unchanged and the Scrum Team continuously learns and adapts.
+- [ ] The Sprint is extended temporarily. Lessons are taken to ensure it does not happen again.
+- [ ] The sprint is extended and future Sprints use this new duration.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### What is Pair Programming? (choose the best answer)
+
+- [ ] Developers that are able to write code both in the back-end and the font-end.
+- [x] Two Developers working on the same problem, at the same computer (physically or virtually) at the same time.
+- [ ] Two persons working on the same Product Backlog item trying to get it done as soon as possible.
+- [ ] A Tester and a Developer working together to ensure high quality.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### The Developers as their Product Owner to re-order the Product Backlog. The team is waiting for an external supplier to deliver a component. Without that component there will not be enough work in the next Sprint to occupy the full team. As the Scrum Master, what advice would you give the Product Owner? (choose the best answer)
+
+- [ ] Tell the Product Owner to re-order the Product Backlog so the work involving the external component can be planned in a separate Sprint.
+- [x] Remind the Product Owner that their primary concern is the flow of value reflected in the ordering of the Product Backlog.
+- [ ] Tell the Product Owner that the Product Backlog should be ordered to maximize utilization of the Developers.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### What are two reasons to automate the software build process? (choose the best two answers)
+
+- [x] Automation provides feedback on changes to the code early and often.
+- [ ] Automation enables faster code reviews.
+- [ ] You cannot run automated tests without and automated build.
+- [x] Automation improves the quality of software by making builds less error prone.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### Which of the following are benefits of a good Definition of Done? (choose the best three answers)
+
+- [x] Clear Communication of the Scrum Team's quality standards.
+- [x] A useful Increment by the end of each Sprint.
+- [ ] An ongoing strategy or technique for steadily addressing technical debt.
+- [x] Guidance on the specific patterns to be implemented in code.
+- [ ] A full description of all test steps.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### Which statement best describes the Sprint Review? (choose the best answer)
+
+- [ ] It is a mechanism to control the Developers activities during a Sprint.
+- [ ] It is used to congratulate the Developers if they complete their forecast or to punish the Developers if the fail to meet their forecast.
+- [ ] It is when the Scrum Team and stakeholders inspect the outcome of a Sprint and figure out what to do next.
+- [x] It is a demo at the end of the Sprint for everyone in the organization to check on the work done.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### Who is responsible for a Sprint Backlog item that contains several database related tasks? (choose the best answer)
+
+- [ ] Scrum Master.
+- [x] Developers.
+- [ ] Project Stakeholders.
+- [ ] Database Administrator.
+- [ ] Product Owner.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### Choose three reasons why automated builds are important? (choose the best three answers)
+
+- [x] The allow frequent validation and ensure the product remains in a usable state.
+- [ ] They eliminate the need for Build Engineers.
+- [x] The support Continuous Integration.
+- [ ] The ensure your product remains bug free.
+- [x] They clearly define the build process.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### What relationship does Scrum have to development practices? (choose the best answer)
+
+- [ ] Scrum requires all development practices.
+- [ ] Scrum has no relationship to development practices.
+- [ ] Scrum requires specific development practices.
+- [x] Scrum is complemented by development practices.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### Who should make sure everyone on the Scrum Team does their tasks for the Sprint? (choose the best answer)
+
+- [ ] The Project Manager.
+- [ ] The Product Owner.
+- [ ] The Scrum Master.
+- [x] The Scrum Team.
+- [ ] All of the above.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### Which answer best describes Behavior-Driven Development (BDD)? (choose the best answer)
+
+- [x] An agile practice that encourages collaboration between business, implementation and testing perspectives.
+- [ ] A development style that accounts for leadership style among team members.
+- [ ] A way to organize Unit Tests based on class and method structures.
+- [ ] A technique for maintaining Regression Test harnesses.
 
 **[⬆ Back to Top](#table-of-contents)**

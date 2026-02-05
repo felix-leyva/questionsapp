@@ -20,7 +20,7 @@ buildConfig {
     forClass("BuildQuestionsFiles") {
         packageName("de.felixlf.questionsapp")
         // add a md file here and define it: shared/src/commonMain/composeResources/files
-        val fileName = "isaqb_questions.md"
+        val fileName = "scrum_psd_questions.md"
         buildConfigField("String", "QUESTIONS_FILE_NAME", "\"$fileName\"")
     }
 }
