@@ -2641,8 +2641,8 @@
 
 - [x] Clear Communication of the Scrum Team's quality standards.
 - [x] A fully valuable, useful Increment by the end of each Sprint.
-- [ ] An ongoing strategy or technique for steadily addressing Technical Debt.
-- [x] Guidance on the specific patterns to be implemented in code.
+- [x] An ongoing strategy or technique for steadily addressing Technical Debt.
+- [ ] Guidance on the specific patterns to be implemented in code.
 - [ ] A full description of all test steps.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -3009,8 +3009,8 @@
 
 - [x] Clear Communication of the Scrum Team's quality standards.
 - [x] A useful Increment by the end of each Sprint.
-- [ ] An ongoing strategy or technique for steadily addressing technical debt.
-- [x] Guidance on the specific patterns to be implemented in code.
+- [x] An ongoing strategy or technique for steadily addressing technical debt.
+- [ ] Guidance on the specific patterns to be implemented in code.
 - [ ] A full description of all test steps.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -3019,8 +3019,8 @@
 
 - [ ] It is a mechanism to control the Developers activities during a Sprint.
 - [ ] It is used to congratulate the Developers if they complete their forecast or to punish the Developers if the fail to meet their forecast.
-- [ ] It is when the Scrum Team and stakeholders inspect the outcome of a Sprint and figure out what to do next.
-- [x] It is a demo at the end of the Sprint for everyone in the organization to check on the work done.
+- [x] It is when the Scrum Team and stakeholders inspect the outcome of a Sprint and figure out what to do next.
+- [ ] It is a demo at the end of the Sprint for everyone in the organization to check on the work done.
 
 **[⬆ Back to Top](#table-of-contents)**
 
